@@ -1,0 +1,4807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Stacking</class>
+ <widget class="QWidget" name="Stacking">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1024</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="page0_manager">
+    <widget class="QPushButton" name="Btn_stackModeBack">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/back.png</normaloff>:/ManualPage/manualpage_images/back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_stackModePageDown">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>下一页</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/pageDown.png</normaloff>:/ManualPage/manualpage_images/pageDown.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_stackModePageUp">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>上一页</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/pageUp.png</normaloff>:/ManualPage/manualpage_images/pageUp.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>1024</width>
+       <height>550</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1024</width>
+       <height>550</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1024</width>
+       <height>550</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page_3">
+      <widget class="QPushButton" name="Btn_selStacking13">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking12">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking9">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking6">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking8">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking1">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking11">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking15">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking14">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking3">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking2">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking10">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking5">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking7">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking4">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="QPushButton" name="Btn_selStacking23">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking25">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking20">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking30">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking24">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking26">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking18">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking27">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking21">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking29">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking17">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking22">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking19">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_selStacking28">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="Btn_stackCopy">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>10</y>
+       <width>120</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#738AB4;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#454C90; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>码垛拷贝</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_stackModePage">
+     <property name="geometry">
+      <rect>
+       <x>326</x>
+       <y>636</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>page</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_stackMode">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>xx</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_stackMode">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>200</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    text-align:left;
+    background-color:white;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#454C90; /*边框颜色*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+}</string>
+     </property>
+     <property name="text">
+      <string>码垛方式：</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <zorder>Btn_stackModeBack</zorder>
+    <zorder>Btn_stackModePageDown</zorder>
+    <zorder>Btn_stackModePageUp</zorder>
+    <zorder>stackedWidget_page</zorder>
+    <zorder>Btn_stackCopy</zorder>
+    <zorder>label_stackModePage</zorder>
+    <zorder>Btn_stackMode</zorder>
+    <zorder>label_stackMode</zorder>
+   </widget>
+   <widget class="QWidget" name="page1_copy">
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1024</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1024</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1024</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+	border:  1px solid black;
+}</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label_copy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>码垛拷贝</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="Btn_UtoC">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>110</y>
+       <width>300</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:20px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:20px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>U盘 → 控制器</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_CtoU">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>310</y>
+       <width>300</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:20px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:20px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>控制器 → U盘</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_selCopyback">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>590</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/SetPage/setpage_images/back.png</normaloff>:/SetPage/setpage_images/back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page2_CtoU">
+    <widget class="QLabel" name="label_copyInfo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>xx</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_stackCopyPage">
+     <property name="geometry">
+      <rect>
+       <x>326</x>
+       <y>636</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>page</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_copyPageUp">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>上一页</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/pageUp.png</normaloff>:/ManualPage/manualpage_images/pageUp.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>1024</width>
+       <height>550</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1024</width>
+       <height>550</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1024</width>
+       <height>550</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_5">
+      <widget class="QPushButton" name="Btn_copyStacking13">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking12">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking9">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking6">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking8">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking1">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking11">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking15">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking14">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>388</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking3">
+       <property name="geometry">
+        <rect>
+         <x>414</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking2">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking10">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking5">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking7">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>228</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking4">
+       <property name="geometry">
+        <rect>
+         <x>617</x>
+         <y>68</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <widget class="QPushButton" name="Btn_copyStacking23">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking25">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking20">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking30">
+       <property name="geometry">
+        <rect>
+         <x>822</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking24">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking26">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking18">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking27">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking21">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking29">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking17">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking22">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>230</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking19">
+       <property name="geometry">
+        <rect>
+         <x>619</x>
+         <y>70</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Btn_copyStacking28">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>390</y>
+         <width>190</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#8987B6; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed,QPushButton::checked
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="Btn_outCopyBack">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/back.png</normaloff>:/ManualPage/manualpage_images/back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_copyPageDown">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>下一页</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/pageDown.png</normaloff>:/ManualPage/manualpage_images/pageDown.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page3_UtoC">
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1024</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1024</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1024</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+	border:  1px solid black;
+}</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="table_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>1000</width>
+       <height>540</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1000</width>
+       <height>540</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>450</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="rowCount">
+      <number>9</number>
+     </property>
+     <property name="columnCount">
+      <number>2</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>500</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>60</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>60</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>20</number>
+     </attribute>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column/>
+     <column/>
+    </widget>
+    <widget class="QPushButton" name="Btn_inCopyOk">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>确定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/SetPage/setpage_images/ok.png</normaloff>:/SetPage/setpage_images/ok.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_inCopyBack">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>630</y>
+       <width>150</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/SetPage/setpage_images/back.png</normaloff>:/SetPage/setpage_images/back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget_tip">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>500</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_8">
+    <widget class="QLabel" name="label_tip2_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>... ...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_76">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>500</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>500</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>500</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{background-color:#8BB5E5;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_tip1_4">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>271</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>码垛信息读取中</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_77">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>70</y>
+       <width>40</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../resource.qrc">:/RunPage/runpage_images/alarm.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

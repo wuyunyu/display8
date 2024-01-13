@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetPage</class>
+ <widget class="QWidget" name="SetPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1024</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QPushButton" name="Btn_sysSet">
+     <property name="geometry">
+      <rect>
+       <x>577</x>
+       <y>80</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 系统设定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/system.png</normaloff>:/main_images/system.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_progSet">
+     <property name="geometry">
+      <rect>
+       <x>577</x>
+       <y>220</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 程序管理</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/stack.png</normaloff>:/main_images/stack.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_safeSet">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>360</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 安全设定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/safepoint.png</normaloff>:/main_images/safepoint.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_signalSet">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>220</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 信号设定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/signal.png</normaloff>:/main_images/signal.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_exFuncSet">
+     <property name="geometry">
+      <rect>
+       <x>577</x>
+       <y>360</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 扩展功能</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/machinepara.png</normaloff>:/main_images/machinepara.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_userSet">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>80</y>
+       <width>250</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:2px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string> 用户设定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/main_images/product.png</normaloff>:/main_images/product.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2"/>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

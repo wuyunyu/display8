@@ -1,0 +1,5717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StackPara</class>
+ <widget class="QWidget" name="StackPara">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="Btn_pageDown">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>640</y>
+     <width>150</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>下一页</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ManualPage/manualpage_images/pageDown.png</normaloff>:/ManualPage/manualpage_images/pageDown.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_pageUp">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>640</y>
+     <width>150</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>上一页</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ManualPage/manualpage_images/pageUp.png</normaloff>:/ManualPage/manualpage_images/pageUp.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_back">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>640</y>
+     <width>150</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ManualPage/manualpage_images/back.png</normaloff>:/ManualPage/manualpage_images/back.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit_item">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>10</y>
+     <width>150</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>物品：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>10</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>垛型：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>旋转方式：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>顶层功能：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>物品高度：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>气缸端口：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>物料偏移：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit_height">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>60</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>60</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>属性：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_offset">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>60</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>未偏移/已偏移</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>110</y>
+     <width>1024</width>
+     <height>520</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>520</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1024</width>
+     <height>520</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>堆叠层数：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_stackNum">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_loopNum">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>循环层数：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>循环起始：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>10</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>第</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>10</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>层</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>10</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>层</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>10</y>
+       <width>61</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>示教：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>10</y>
+       <width>31</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>第</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_curNum">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>本层个数：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>点编号</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>Y 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>Z 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>X 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>O 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 O</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 Y</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 Z</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum1">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>121</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>171</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum3">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>220</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum4">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>270</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum5">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>319</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum6">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>368</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum7">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>418</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum8">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>467</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X1">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X3">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X4">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X5">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X6">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X7">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X8">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y8">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y5">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y6">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y3">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y7">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y4">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y1">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O8">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z5">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O6">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z8">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O3">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z6">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z3">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z7">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O7">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z4">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z1">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O1">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O5">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O4">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO1">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX5">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY6">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO5">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ4">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ6">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ1">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX8">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY3">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ3">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO7">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO4">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO3">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX6">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ8">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX3">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX7">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY7">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX4">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ5">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO6">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX1">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO8">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ7">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY8">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY1">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY5">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY4">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_loopStart">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_teachNum">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QLineEdit" name="Edit_Z4_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>纵向个数：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ6_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum5_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>319</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX3_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY3_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 O</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y6_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O3_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX5_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO5_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY1_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O1_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO7_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ5_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>堆叠层数：</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum4_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>270</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z2_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO6_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y1_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X7_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z1_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O2_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX7_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO4_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y2_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ2_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>点编号</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY6_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_35">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>Y 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX4_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_36">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 Y</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX1_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X3_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y8_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum8_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>467</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X5_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z7_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum3_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>220</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ7_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_stackNum_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X4_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ8_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY2_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO3_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>X 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O5_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y3_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY7_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X1_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX6_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum1_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>121</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z6_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O8_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z3_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z5_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y7_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O4_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO1_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY5_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X8_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_39">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>O 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O6_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum7_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>418</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX8_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ4_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_40">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>等待点 Z</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>横向个数：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ1_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>121</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X2_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y4_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY4_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>270</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_O7_2">
+     <property name="geometry">
+      <rect>
+       <x>439</x>
+       <y>418</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO8_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_41">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>61</y>
+       <width>110</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#47E5E8;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+     </property>
+     <property name="text">
+      <string>Z 轴</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_X6_2">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>368</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum6_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>368</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitX2_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Z8_2">
+     <property name="geometry">
+      <rect>
+       <x>323</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_Y5_2">
+     <property name="geometry">
+      <rect>
+       <x>207</x>
+       <y>319</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitZ3_2">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>220</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitY8_2">
+     <property name="geometry">
+      <rect>
+       <x>671</x>
+       <y>467</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_waitO2_2">
+     <property name="geometry">
+      <rect>
+       <x>903</x>
+       <y>171</y>
+       <width>110</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_pointNum2_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>171</y>
+       <width>70</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_HNum">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_VNum">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>10</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget_dialog">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>110</y>
+     <width>500</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_3">
+    <widget class="QPushButton" name="Btn_Ok">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>310</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+     <property name="text">
+      <string>确定</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/ManualPage/manualpage_images/ok.png</normaloff>:/ManualPage/manualpage_images/ok.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_dialogX">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>110</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>X 轴</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>500</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>500</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>500</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{background-color:#8BB5E5;}</string>
+     </property>
+     <property name="text">
+      <string>笛卡尔坐标系</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>110</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Y 轴</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_42">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Z 轴</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_43">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>190</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>C 轴</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_dialogY">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>110</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_dialogZ">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>190</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit_dialogC">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>190</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QComboBox" name="comboBox_port">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>60</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#F1F5FE;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_property">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>60</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>码垛/拆垛</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_model">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#F1F5FE;
+border-style:solid; /*边框风格*/
+border-width:1px;/*边框宽度*/
+border-color:#B4B6BC; /*边框颜色*/
+border-radius:10px; /*边框倒角*/</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_mode">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>10</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>电机/气缸</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_topFunc">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>10</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+    background-color:#F1F5FE;
+    border-style:solid; /*边框风格*/
+    border-width:1px;/*边框宽度*/
+    border-color:#B4B6BC; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}
+QPushButton:pressed
+{
+    border-style:outset; /*边框风格*/
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #00befa, stop: 1 #0160ea);/*背景色*/
+    border-width:1px;/*边框宽度*/
+    border-color:#0055ff; /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+}</string>
+   </property>
+   <property name="text">
+    <string>关闭/开启</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_pageNum">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>650</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>pageNum</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
