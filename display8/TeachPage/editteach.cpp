@@ -26,6 +26,25 @@ EditTeach::EditTeach(QWidget *parent) :
         pWidget->showEditDialog(CondSel_id);
     });
 
+    //自由编程页面-输入输出口选择
+    connect(ui->Btn_detectPort, &QPushButton::clicked, this, [=](){
+        pWidget->changeSetPage(Signal_id);
+    });
+
+    //自由编程页面-脉宽输出端口选择
+    connect(ui->Btn_pulseWidthOutputPort, &QPushButton::clicked, this, [=](){
+        pWidget->OutputPortSetPage();
+        Global::Program_Buffer.Key = K_PULSE_OUTPUT;
+        pWidget->SignalSet_ui->IO_Detect_Display_Refresh();
+    });
+
+    //自由编程页面-输出检测端口选择
+    connect(ui->Btn_OutputDetectPort, &QPushButton::clicked, this, [=](){
+        pWidget->OutputPortSetPage();
+        Global::Program_Buffer.Key = K_OUTDETECT;
+        pWidget->SignalSet_ui->IO_Detect_Display_Refresh();
+    });
+
     AxisMoveSel(ui->Btn_axisMoveX,ui->Btn_axisMoveX->text());
     AxisMoveSel(ui->Btn_axisMoveY,ui->Btn_axisMoveY->text());
     AxisMoveSel(ui->Btn_axisMoveZ,ui->Btn_axisMoveZ->text());
@@ -104,20 +123,52 @@ void EditTeach::inputDetectShow(const QString portShow)
     ui->Btn_InputDetectPort->setText(portShow);
 }
 
-void EditTeach::displayText()
+//自由编程界面，O方式的输入口选择显示
+void EditTeach::dispInputPortText(u8 IOPort)
 {
-    if(TEACH::teach_dialog_flag == PulseWidthOutput_id)
-    {
-        ui->Btn_pulseWidthOutputPort->setText(GP->u8toqstr(GP->Temp_Display_Data, 12));
-    }
-    else if(TEACH::teach_dialog_flag == OutputDetect_id)
-    {
-        ui->Btn_OutputDetectPort->setText(GP->u8toqstr(GP->Temp_Display_Data, 12));
-    }
-    else if(TEACH::teach_dialog_flag == JudgeCond_id)
-    {
-        ui->Btn_detectPort->setText(GP->u8toqstr(GP->Temp_Display_Data, 12));
-    }
+    pWidget->backEditTeachPage();   //返回信号条件端口选择页面
+    Global::Program_Buffer.Value2 = IOPort | 0xc0000000;
+    Global::Parameter_StringChang(Global::Temp_Display_Data,0,
+                                  Global::IO_Name_Parameter_Input[Global::Program_Buffer.Value2].Name,
+                                  Global::IO_Name_Parameter_Input[Global::Program_Buffer.Value2].Name1,
+                                  Global::IO_Name_Parameter_Input[Global::Program_Buffer.Value2].Name2);
+    ui->Btn_detectPort->setText(Global::u8toqstr(Global::Temp_Display_Data, 12));
+}
 
+//自由编程界面，脉宽输出、输出检测、O方式的输出口选择显示
+void EditTeach::dispIOPortText(u8 IOPort)
+{
+    if(Global::Program_Buffer.Key == K_PULSE_OUTPUT || Global::Program_Buffer.Key == K_OUTDETECT)
+    {
+        Global::Program_Buffer.Value1 = IOPort | 0xc0000000;
+        if(Global::Program_Buffer.Key == K_PULSE_OUTPUT)
+        {
+            pWidget->backEditTeachPage();   //返回脉宽输出端口选择页面
+            Global::Parameter_StringChang(Global::Temp_Display_Data,0,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name1,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name2);
+            ui->Btn_pulseWidthOutputPort->setText(Global::u8toqstr(Global::Temp_Display_Data, 12));
+        }
+        else
+        {
+            pWidget->backEditTeachPage();   //返回输出检测端口选择页面
+            Global::Parameter_StringChang(Global::Temp_Display_Data,0,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name1,
+                                          Global::IO_Name_Parameter[Global::Program_Buffer.Value1].Name2);
+            ui->Btn_OutputDetectPort->setText(Global::u8toqstr(Global::Temp_Display_Data, 12));
+        }
+    }
+    else if(Global::Program_Buffer.Key == K_IF || Global::Program_Buffer.Key == K_ELSE)
+    {
+        pWidget->backEditTeachPage();   //返回信号条件端口选择页面
+        Global::Program_Buffer.Value2 = IOPort | 0xc0000000;
+        Global::Parameter_StringChang(Global::Temp_Display_Data,0,
+                                      Global::IO_Name_Parameter[Global::Program_Buffer.Value2].Name,
+                                      Global::IO_Name_Parameter[Global::Program_Buffer.Value2].Name1,
+                                      Global::IO_Name_Parameter[Global::Program_Buffer.Value2].Name2);
+        ui->Btn_detectPort->setText(Global::u8toqstr(Global::Temp_Display_Data, 12));
+    }
 }
 

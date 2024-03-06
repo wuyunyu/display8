@@ -209,7 +209,7 @@ QPushButton:pressed
         <string notr="true">background-color:white;</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page_3">
         <widget class="QLabel" name="label_10">
@@ -1579,7 +1579,7 @@ QPushButton:pressed,QPushButton::checked
         </size>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>5</number>
        </property>
        <widget class="QWidget" name="page0_userSet"/>
        <widget class="QWidget" name="page1_signalSet"/>
@@ -1978,44 +1978,6 @@ background-color: #A1ABC5;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QStackedWidget" name="stackedWidget_teachDialog">
-     <property name="geometry">
-      <rect>
-       <x>530</x>
-       <y>0</y>
-       <width>500</width>
-       <height>668</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>500</width>
-       <height>668</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>500</width>
-       <height>600</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="page_dialog"/>
-     <widget class="QWidget" name="page_editDialog"/>
-    </widget>
     <widget class="QLabel" name="label_manual">
      <property name="geometry">
       <rect>
@@ -2190,6 +2152,44 @@ background-color: #A1ABC5;</string>
        <bool>false</bool>
       </property>
      </widget>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_teachDialog">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>0</y>
+       <width>500</width>
+       <height>668</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>500</width>
+       <height>668</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>500</width>
+       <height>600</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_dialog"/>
+     <widget class="QWidget" name="page_editDialog"/>
     </widget>
     <zorder>label</zorder>
     <zorder>stackedWidget_main</zorder>

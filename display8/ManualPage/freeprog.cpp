@@ -31,21 +31,21 @@ void FreeProg::Refresh_MD_Circulation()
     JawList<<ui->label_jaw1<<ui->label_jaw2<<ui->label_jaw3
           <<ui->label_jaw4<<ui->label_jaw5<<ui->label_jaw6;
 
-    if(GP->JXS_Parameter.MDgripSwitch == 1)
+    if(Global::JXS_Parameter.MDgripSwitch == 1)
     {
         for(int i = 0; i<MDgrip_Num; i++)
         {
-            if(GP->JXS_Parameter.MDgripPort[i] == 0)	//夹爪i端口无效
+            if(Global::JXS_Parameter.MDgripPort[i] == 0)	//夹爪i端口无效
             {
                 JawList.at(i)->setText(MD_InvalidGrip2);
             }
             else
             {
-                GP->Parameter_StringChang(GP->Temp_Display_Data1, 0,
-                        GP->IO_Name_Parameter[GP->JXS_Parameter.MDgripPort[i]-1].Name,
-                        GP->IO_Name_Parameter[GP->JXS_Parameter.MDgripPort[i]-1].Name1,
-                        GP->IO_Name_Parameter[GP->JXS_Parameter.MDgripPort[i]-1].Name2);
-                JawList.at(i)->setText(GP->u8toqstr(GP->Temp_Display_Data1, 12));
+                Global::Parameter_StringChang(Global::Temp_Display_Data1, 0,
+                        Global::IO_Name_Parameter[Global::JXS_Parameter.MDgripPort[i]-1].Name,
+                        Global::IO_Name_Parameter[Global::JXS_Parameter.MDgripPort[i]-1].Name1,
+                        Global::IO_Name_Parameter[Global::JXS_Parameter.MDgripPort[i]-1].Name2);
+                JawList.at(i)->setText(Global::u8toqstr(Global::Temp_Display_Data1, 12));
             }
         }
     }

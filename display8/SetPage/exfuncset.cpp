@@ -19,33 +19,33 @@ ExFuncSet::ExFuncSet(QWidget *parent) :
 
     connect(ui->Btn_IOT, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(0);
-        GP->gs_Reflash_Fuction_Internet = TRUE;
-        Reflash_Fuction_Internet(GP->gs_Reflash_Fuction_Internet);
+        Global::gs_Reflash_Fuction_Internet = TRUE;
+        Reflash_Fuction_Internet();
     });
 
     //物联网功能开关
     connect(ui->Btn_IOTfunc, &QPushButton::clicked, this, [=](){
-        if(GP->Internet_Parameter.Switch == 1)
+        if(Global::Internet_Parameter.Switch == 1)
         {
-            GP->Internet_Parameter.Switch = 0;
+            Global::Internet_Parameter.Switch = 0;
         }
         else
         {
-            GP->Internet_Parameter.Switch = 1;
+            Global::Internet_Parameter.Switch = 1;
             //物联网功能打开试，关闭绝对值功能
-            GP->Temp_JDZ_Parameter.Switch = 0;
-            GP->JDZ_Parameter.Switch = GP->Temp_JDZ_Parameter.Switch;
-            GP->JDZ_Parameter.Server = GP->Temp_JDZ_Parameter.Server;
-            GP->JDZ_Parameter.Resolu = GP->Temp_JDZ_Parameter.Resolu;
+            Global::Temp_JDZ_Parameter.Switch = 0;
+            Global::JDZ_Parameter.Switch = Global::Temp_JDZ_Parameter.Switch;
+            Global::JDZ_Parameter.Server = Global::Temp_JDZ_Parameter.Server;
+            Global::JDZ_Parameter.Resolu = Global::Temp_JDZ_Parameter.Resolu;
             for(int i=0; i<AXIS_NUM; i++)
             {
-                GP->JDZ_Parameter.OriginSetting[i] = 0;
-                GP->JDZ_Parameter.Circle_Pluse[i] = GP->Temp_JDZ_Parameter.Circle_Pluse[i];
-                GP->JDZ_Parameter.Motion_Dir[i] = GP->Temp_JDZ_Parameter.Motion_Dir[i];
+                Global::JDZ_Parameter.OriginSetting[i] = 0;
+                Global::JDZ_Parameter.Circle_Pluse[i] = Global::Temp_JDZ_Parameter.Circle_Pluse[i];
+                Global::JDZ_Parameter.Motion_Dir[i] = Global::Temp_JDZ_Parameter.Motion_Dir[i];
             }
         }
-        GP->f_SendInternetPara();
-        ui->Btn_IOTfunc->setText(Function_switch[GP->Internet_Parameter.Switch]);   //功能开关
+        Global::f_SendInternetPara();
+        ui->Btn_IOTfunc->setText(Function_switch[Global::Internet_Parameter.Switch]);   //功能开关
     });
 }
 
@@ -55,24 +55,20 @@ ExFuncSet::~ExFuncSet()
 }
 
 //物联网设定界面刷新
-void ExFuncSet::Reflash_Fuction_Internet(u8 flag)
+void ExFuncSet::Reflash_Fuction_Internet()
 {
-    if(flag)
-    {//物联网设定界面刷新
-        u8 tempChar[20] = {0};
-        for(int i=0; i<12; i++)
+    u8 tempChar[20] = {0};
+    for(int i=0; i<12; i++)
+    {
+        if(Global::JudgLetterDigit(Global::Internet_Parameter.Sequence[i]) > 0)
         {
-            if(GP->JudgLetterDigit(GP->Internet_Parameter.Sequence[i]) > 0)
-            {
-                tempChar[i] = GP->Internet_Parameter.Sequence[i];
-            }
-            else
-            {
-                tempChar[i] = '*';
-            }
+            tempChar[i] = Global::Internet_Parameter.Sequence[i];
         }
-        ui->label_serialNum->setText(GP->u8toqstr(tempChar, 12));   //随机序列
-        ui->Btn_IOTfunc->setText(Function_switch[GP->Internet_Parameter.Switch]);   //功能开关
-        flag = FALSE;
+        else
+        {
+            tempChar[i] = '*';
+        }
     }
+    ui->label_serialNum->setText(Global::u8toqstr(tempChar, 12));   //随机序列
+    ui->Btn_IOTfunc->setText(Function_switch[Global::Internet_Parameter.Switch]);   //功能开关
 }

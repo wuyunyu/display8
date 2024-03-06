@@ -38,12 +38,14 @@ public:
     void stackParaSet();
     void init();
 
+    void chooseGoodMode();
+
 public:
-    void Reflash_Name_MD(u8 flag);
+    void Reflash_Name_MD();
 
 public:
     Ui::Stacking *ui;
-    GlobalPara *GP;
+//    Global GL;
     ProdPara *ProdPara_ui;
     Widget *pWidget;    //创建父类窗口指针
 };

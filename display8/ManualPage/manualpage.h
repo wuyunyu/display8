@@ -24,13 +24,12 @@ public:
     void init();
 
 public:
-    void Refresh_Speed_Para(u8 flag);
+    void Refresh_Speed_Para();
     void Refresh_MD_Circulation();
 
-private:
+public:
     Ui::ManualPage *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

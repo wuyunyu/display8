@@ -22,8 +22,10 @@ public:
 
     void init();
 
+    void dispIOPortText(u8 IOPort);
+
 public:
-    void PF_Refresh(u8 flag);
+    void PF_Refresh();
 
 
 public:
@@ -31,10 +33,9 @@ public:
     QList<QPushButton*> Btn_Item_List;
     QList<QPushButton*> Btn_Switch_List;
 
-private:
+public:
     Ui::Formula *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

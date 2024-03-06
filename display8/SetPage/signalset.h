@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QList>
+#include <QLabel>
+#include <QCheckBox>
 #include <QPushButton>
 #include "ParaConfig/parasum.h"
 
@@ -27,6 +29,8 @@ class SignalSet : public QWidget
 public:
     QList<QPushButton*> Btn_X_List;
     QList<QPushButton*> Btn_Y_List;
+    QList<QLabel*> Label_RstSel_List;
+    QList<QCheckBox*> CheckBox_RstSel_List;
 
 public:
     explicit SignalSet(QWidget *parent = nullptr);
@@ -35,15 +39,16 @@ public:
     void init();
     void InputSetPage();
     void OutputSetPage();
+    void InputPort_DialogShow(u8 IOProt);
+    void OutputPort_DialogShow(u8 IOProt);
 
 public:
-    void IO_Detect_Display_Refresh_Input(u8 flag);
-    void IO_Detect_Display_Refresh(u8 flag);
+    void IO_Detect_Display_Refresh_Input();
+    void IO_Detect_Display_Refresh();
 
-private:
+public:
     Ui::SignalSet *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

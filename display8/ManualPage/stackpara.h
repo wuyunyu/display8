@@ -21,9 +21,11 @@ public:
     void init();
     void modStackCoord();
 
-private:
-    Ui::StackPara *ui;
+    void dispIOPortText(u8 IOPort);
 
+public:
+    Ui::StackPara *ui;
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

@@ -15,19 +15,16 @@ class ExFuncSet : public QWidget
 {
     Q_OBJECT
 
-    friend class SetPage;
-
 public:
     explicit ExFuncSet(QWidget *parent = nullptr);
     ~ExFuncSet();
 
 public:
-    void Reflash_Fuction_Internet(u8 flag);
+    void Reflash_Fuction_Internet();
 
-private:
+public:
     Ui::ExFuncSet *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

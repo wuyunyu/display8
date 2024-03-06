@@ -44,16 +44,16 @@ public:
     void outputCtlShow(const QString portShow);
     void inputDetectShow(const QString portShow);
 
-    void displayText();
+    void dispInputPortText(u8 IOPort);
+    void dispIOPortText(u8 IOPort);   //自由编程界面，脉宽输出、输出检测、O方式的输出口选择显示
 
 private slots:
 
 
-private:
+public:
     Ui::EditTeach *ui;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
-    GlobalPara *GP;
 };
 
 #endif // EDITTEACH_H

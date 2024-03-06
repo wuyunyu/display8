@@ -138,70 +138,26 @@ TeachPage::TeachPage(QWidget *parent) :
     });
 
     ///////////////////////////////输入检测端口按钮跳转对话框开始/////////////////////////////
-    Input(ui->Btn_X0 , InputIO_Detect_IO[0]);
-    Input(ui->Btn_X1 , InputIO_Detect_IO[1]);
-    Input(ui->Btn_X2 , InputIO_Detect_IO[2]);
-    Input(ui->Btn_X3 , InputIO_Detect_IO[3]);
-    Input(ui->Btn_X4 , InputIO_Detect_IO[4]);
-    Input(ui->Btn_X5 , InputIO_Detect_IO[5]);
-    Input(ui->Btn_X6 , InputIO_Detect_IO[6]);
-    Input(ui->Btn_X7 , InputIO_Detect_IO[7]);
-    Input(ui->Btn_X8 , InputIO_Detect_IO[8]);
-    Input(ui->Btn_X9 , InputIO_Detect_IO[9]);
-    Input(ui->Btn_X10, InputIO_Detect_IO[10]);
-    Input(ui->Btn_X11, InputIO_Detect_IO[11]);
-    Input(ui->Btn_X12, InputIO_Detect_IO[12]);
-    Input(ui->Btn_X13, InputIO_Detect_IO[13]);
-    Input(ui->Btn_X14, InputIO_Detect_IO[14]);
-    Input(ui->Btn_X15, InputIO_Detect_IO[15]);
-    Input(ui->Btn_X16, InputIO_Detect_IO[16]);
-    Input(ui->Btn_X17, InputIO_Detect_IO[17]);
-    Input(ui->Btn_X18, InputIO_Detect_IO[18]);
-    Input(ui->Btn_X19, InputIO_Detect_IO[19]);
-    Input(ui->Btn_X20, InputIO_Detect_IO[20]);
-    Input(ui->Btn_X21, InputIO_Detect_IO[21]);
-    Input(ui->Btn_X22, InputIO_Detect_IO[22]);
-    Input(ui->Btn_X23, InputIO_Detect_IO[23]);
-    Input(ui->Btn_X24, InputIO_Detect_IO[24]);
-    Input(ui->Btn_X25, InputIO_Detect_IO[25]);
-    Input(ui->Btn_X26, InputIO_Detect_IO[26]);
-    Input(ui->Btn_X27, InputIO_Detect_IO[27]);
-    Input(ui->Btn_X28, InputIO_Detect_IO[28]);
-    Input(ui->Btn_X29, InputIO_Detect_IO[29]);
-    //////////////////////////////////////////输入检测端口按钮跳转对话框结束////////////////////////////////////////
+    for(int i = 0; i < INPUT_NUM; i++)
+    {
+        connect(Btn_Input_Port.at(i), &QPushButton::clicked, this, [=](){
+            inputPort = InputIO_Detect_IO[i];
+            ui->stackedWidget_teach->setCurrentIndex(Prog_id);
+            pWidget->showEditTeach(InputDetect_id);
+        });
+    }
+    ///////////////////////////////输入检测端口按钮跳转对话框结束/////////////////////////////
 
     ///////////////////////////////输出控制端口按钮跳转对话框开始/////////////////////////////
-    Output(ui->Btn_Y0 , OutputIO_Detect_IO[0]);
-    Output(ui->Btn_Y1 , OutputIO_Detect_IO[1]);
-    Output(ui->Btn_Y2 , OutputIO_Detect_IO[2]);
-    Output(ui->Btn_Y3 , OutputIO_Detect_IO[3]);
-    Output(ui->Btn_Y4 , OutputIO_Detect_IO[4]);
-    Output(ui->Btn_Y5 , OutputIO_Detect_IO[5]);
-    Output(ui->Btn_Y6 , OutputIO_Detect_IO[6]);
-    Output(ui->Btn_Y7 , OutputIO_Detect_IO[7]);
-    Output(ui->Btn_Y8 , OutputIO_Detect_IO[8]);
-    Output(ui->Btn_Y9 , OutputIO_Detect_IO[9]);
-    Output(ui->Btn_Y10, OutputIO_Detect_IO[10]);
-    Output(ui->Btn_Y11, OutputIO_Detect_IO[11]);
-    Output(ui->Btn_Y12, OutputIO_Detect_IO[12]);
-    Output(ui->Btn_Y13, OutputIO_Detect_IO[13]);
-    Output(ui->Btn_Y14, OutputIO_Detect_IO[14]);
-    Output(ui->Btn_Y15, OutputIO_Detect_IO[15]);
-    Output(ui->Btn_Y16, OutputIO_Detect_IO[16]);
-    Output(ui->Btn_Y17, OutputIO_Detect_IO[17]);
-    Output(ui->Btn_Y18, OutputIO_Detect_IO[18]);
-    Output(ui->Btn_Y19, OutputIO_Detect_IO[19]);
-    Output(ui->Btn_Y20, OutputIO_Detect_IO[20]);
-    Output(ui->Btn_Y21, OutputIO_Detect_IO[21]);
-    Output(ui->Btn_Y22, OutputIO_Detect_IO[22]);
-    Output(ui->Btn_Y23, OutputIO_Detect_IO[23]);
-    Output(ui->Btn_Y24, OutputIO_Detect_IO[24]);
-    Output(ui->Btn_Y25, OutputIO_Detect_IO[25]);
-    Output(ui->Btn_Y26, OutputIO_Detect_IO[26]);
-    Output(ui->Btn_Y27, OutputIO_Detect_IO[27]);
-    Output(ui->Btn_RY0, OutputIO_Detect_IO[28]);
-    Output(ui->Btn_RY1, OutputIO_Detect_IO[29]);
-    //////////////////////////////////////////输出控制端口按钮跳转对话框结束////////////////////////////////////////
+    for(int i = 0; i < OUTPUT_NUM; i++)
+    {
+        connect(Btn_Output_Port.at(i), &QPushButton::clicked, this, [=](){
+            outputPort = OutputIO_Detect_IO[i];
+            ui->stackedWidget_teach->setCurrentIndex(Prog_id);
+            pWidget->showEditTeach(OutputDetect_id);
+        });
+    }
+    ///////////////////////////////输出控制端口按钮跳转对话框结束/////////////////////////////
 }
 
 TeachPage::~TeachPage()
@@ -211,6 +167,14 @@ TeachPage::~TeachPage()
 
 void TeachPage::init()
 {
+    Btn_Input_Port<<ui->Btn_X0<<ui->Btn_X1<<ui->Btn_X2<<ui->Btn_X3<<ui->Btn_X4<<ui->Btn_X5<<ui->Btn_X6<<ui->Btn_X7<<ui->Btn_X8<<ui->Btn_X9
+                  <<ui->Btn_X10<<ui->Btn_X11<<ui->Btn_X12<<ui->Btn_X13<<ui->Btn_X14<<ui->Btn_X15<<ui->Btn_X16<<ui->Btn_X17<<ui->Btn_X18<<ui->Btn_X19
+                  <<ui->Btn_X20<<ui->Btn_X21<<ui->Btn_X22<<ui->Btn_X23<<ui->Btn_X24<<ui->Btn_X25<<ui->Btn_X26<<ui->Btn_X27<<ui->Btn_X28<<ui->Btn_X29;
+
+    Btn_Output_Port<<ui->Btn_Y0<<ui->Btn_Y1<<ui->Btn_Y2<<ui->Btn_Y3<<ui->Btn_Y4<<ui->Btn_Y5<<ui->Btn_Y6<<ui->Btn_Y7<<ui->Btn_Y8<<ui->Btn_Y9
+                   <<ui->Btn_Y10<<ui->Btn_Y11<<ui->Btn_Y12<<ui->Btn_Y13<<ui->Btn_Y14<<ui->Btn_Y15<<ui->Btn_Y16<<ui->Btn_Y17<<ui->Btn_Y18<<ui->Btn_Y19
+                   <<ui->Btn_Y20<<ui->Btn_Y21<<ui->Btn_Y22<<ui->Btn_Y23<<ui->Btn_Y24<<ui->Btn_Y25<<ui->Btn_Y26<<ui->Btn_Y27<<ui->Btn_RY0<<ui->Btn_RY1;
+
     SET::g_IO_Detect_Output = 29;
     ui->stackedWidget_teach->setCurrentIndex(Prog_id);
     ui->stackedWidget_menu->setCurrentIndex(MainMenu_id);

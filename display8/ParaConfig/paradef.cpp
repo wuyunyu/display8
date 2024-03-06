@@ -86,8 +86,19 @@ const QString Output_Reset_Select_String[6] = {
     "停止",
 };
 
-const QString  Buzzer_Switch_On = "开";                       //蜂鸣器：开
-const QString  Buzzer_Switch_Off = "关";                      //蜂鸣器：关
+//密码错误提示
+const QString  PasswordError_Tip[3]= {
+    "原密码错误，请输入正确原密码!",
+    "请输入有效的六位密码!",
+    "两次输入密码不一致!",
+};
+
+ //蜂鸣器：开关
+const QString  Buzzer_Switch[2] = {
+    "关",
+    "开",
+};
+
 const QString  gs_Pass_Word_String= "******";                //显示的隐藏字符
 const QString  SoftLimit_On = "开";                           //X轴限位：开
 const QString  SoftLimit_Off = "关";                          //X轴限位：关

@@ -21,7 +21,7 @@ public:
 private slots:
     void on_Btn_clr_clicked();
 
-private:
+public:
     Ui::AlarmPage *ui;
 };
 

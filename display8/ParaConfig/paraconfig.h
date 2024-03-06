@@ -98,10 +98,10 @@ extern const char* Manul_Save_Point_Array_Flag_Key;
 extern const char* Manul_Save_Point_Array_Name_Key;
 extern const char* Manul_Save_Point_Array_Name2_Key;
 extern const char* Manul_Save_Point_Array_Name3_Key;
-extern const char* Manul_Save_Point_Array_Point_X_ASIS_Key;
-extern const char* Manul_Save_Point_Array_Point_Y_ASIS_Key;
-extern const char* Manul_Save_Point_Array_Point_Z_ASIS_Key;
-extern const char* Manul_Save_Point_Array_Point_O_ASIS_Key;
+extern const char* Manul_Save_Point_Array_Point_X_AXIS_Key;
+extern const char* Manul_Save_Point_Array_Point_Y_AXIS_Key;
+extern const char* Manul_Save_Point_Array_Point_Z_AXIS_Key;
+extern const char* Manul_Save_Point_Array_Point_O_AXIS_Key;
 
 
 //程序程序信息参数（20个）
@@ -186,9 +186,9 @@ extern const char* sMD_Parameter_teachLayer_Key;
 
 
 //码垛物品名称
+extern const char* sMD_Name_Array_Name_Key;
 extern const char* sMD_Name_Array_Name1_Key;
 extern const char* sMD_Name_Array_Name2_Key;
-extern const char* sMD_Name_Array_Name3_Key;
 
 
 //输出复位选择
@@ -222,8 +222,8 @@ public:
     ~ParaConfig();
 
 public:
-    void InitConfigPara();
-    void Config_DateSyc(void);
+    void RstConfigPara();
+    void Config_DateSyc();
 
 private:
 

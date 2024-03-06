@@ -4,6 +4,9 @@
 #include <QPixmap>
 #include <QAction>
 #include <QWidget>
+#include <QList>
+#include <QLabel>
+#include "./VirtualDevice/syscfgfactory.h"
 #include "./RunPage/runpage.h"
 #include "./RunPage/formula.h"
 #include "./RunPage/prodpara.h"
@@ -25,7 +28,6 @@
 #include "./ManualPage/freeprog.h"
 #include "./TeachPage/editteach.h"
 #include "./TeachPage/editdialog.h"
-#include "./VirtualDevice/syscfgfactory.h"
 #include "./ParaConfig/parasum.h"
 #include "./ParaConfig/paraconfig.h"
 #include "./MidLevel/md.h"
@@ -34,64 +36,42 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
 
-class RunPage;
-class Formula;
-class ProdPara;
+//class GlobalPara;
 
-class TeachPage;
-class EditTeach;
-class EditDialog;
+//class RunPage;
+//class Formula;
+//class ProdPara;
 
-class DebugPage;
+//class TeachPage;
+//class EditTeach;
+//class EditDialog;
 
-class ManualPage;
-class MemoryPoint;
-class Stacking;
-class StackPara;
-class StackSet;
-class FreeProg;
+//class DebugPage;
 
-class UserSet;
-class SignalSet;
-class SafeSet;
-class SysSet;
-class ProgSet;
-class ExFuncSet;
+//class ManualPage;
+//class MemoryPoint;
+//class Stacking;
+//class StackPara;
+//class StackSet;
+//class FreeProg;
 
-class AlarmPage;
+//class SetPage;
+//class UserSet;
+//class SignalSet;
+//class SafeSet;
+//class SysSet;
+//class ProgSet;
+//class ExFuncSet;
+
+//class AlarmPage;
 
 class Widget : public QWidget
 {
     Q_OBJECT
 
-    friend class RunPage;
-    friend class Formula;
-    friend class ProdPara;
-
-    friend class TeachPage;
-    friend class EditTeach;
-    friend class EditDialog;
-
-    friend class DebugPage;
-
-    friend class ManualPage;
-    friend class MemoryPoint;
-    friend class Stacking;
-    friend class StackPara;
-    friend class StackSet;
-    friend class FreeProg;
-
-    friend class UserSet;
-    friend class SignalSet;
-    friend class SafeSet;
-    friend class SysSet;
-    friend class ProgSet;
-    friend class ExFuncSet;
-
-    friend class AlarmPage;
-
 public:
     bool isAdmin;
+    QList<QLabel*> Label_Axis_Pos;
 
 public:
     Widget(QWidget *parent = nullptr);
@@ -99,6 +79,7 @@ public:
 
     void init();
 
+    void formulaPage();
     void prodParaPage();
     void backRunPage();
 
@@ -108,23 +89,25 @@ public:
 
     void stackingPage();
     void stackParaPage();
-    void backStackingPage();
     void stackSetPage();
-    void backStackParaPage();
     void memoryPointPage();
     void backManualPage();
 
     void FreeProgPage();
     void backEditTeachPage();
 
-    void IOPortSetPage();
+    void InputPortSetPage();
+    void OutputPortSetPage();
+
+    void progCopySelPage();
+    void progCopyTipPage();
 
     void showEditTeach(const int DialogID);
     void showEditDialog(const int EidtDialogID);
     void editTeachEnd();
     void editTeachDialogEnd();
 
-    void JDZ_Para_Save();
+    void JDZParaSaveAuthority();
 
     void Auto();
     void Stop();
@@ -145,11 +128,9 @@ private slots:
 
     void on_Btn_errorCancel_clicked();
 
-private:
+public:
     Ui::Widget *ui;
-
     MD mMD;
-    GlobalPara *GP;
 
     //主界面下的各子界面
     RunPage *RunPage_ui;

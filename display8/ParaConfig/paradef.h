@@ -795,8 +795,8 @@ extern const QString SavePoint_Modify_String[5];
 
 extern const QString Output_Reset_Select_String[6];
 
-extern const QString  Buzzer_Switch_On;                       //蜂鸣器：开
-extern const QString  Buzzer_Switch_Off;                      //蜂鸣器：关
+extern const QString  PasswordError_Tip[3];                 //密码错误提示
+extern const QString  Buzzer_Switch[2];                       //蜂鸣器：开关
 extern const QString  gs_Pass_Word_String;                //显示的隐藏字符
 extern const QString  SoftLimit_On;                           //X轴限位：开
 extern const QString  SoftLimit_Off;                          //X轴限位：关

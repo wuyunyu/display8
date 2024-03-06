@@ -28,18 +28,9 @@ public:
     explicit SetPage(QWidget *parent = nullptr);
     ~SetPage();
 
-private:
+public:
     Ui::SetPage *ui;
-    GlobalPara *GP;
-
-    //设置界面下的各个功能界面
-    UserSet *UserSet_ui;
-    SignalSet *SignalSet_ui;
-    SafeSet *SafeSet_ui;
-    SysSet *SysSet_ui;
-    ProgSet *ProgSet_ui;
-    ExFuncSet *ExFuncSet_ui;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

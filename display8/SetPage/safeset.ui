@@ -399,6 +399,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_25">
      <property name="geometry">
@@ -489,6 +492,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Edit_ZlimPosAdd">
      <property name="geometry">
@@ -520,6 +526,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -589,6 +598,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_16">
      <property name="geometry">
@@ -639,6 +651,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_17">
      <property name="geometry">
@@ -688,6 +703,9 @@ border-radius:10px; /*边框倒角*/</string>
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QPushButton" name="Btn_Yenable">
@@ -1285,6 +1303,9 @@ QPushButton:pressed
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Edit_YlimPosMinus">
      <property name="geometry">
@@ -1316,6 +1337,9 @@ QPushButton:pressed
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="Edit_XlimPosMinus">
@@ -1349,6 +1373,9 @@ QPushButton:pressed
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Edit_ZlimPosMinus">
      <property name="geometry">
@@ -1380,6 +1407,9 @@ QPushButton:pressed
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="Edit_OlimPosMinus">
@@ -1413,6 +1443,9 @@ QPushButton:pressed
     border-radius:10px; /*边框倒角*/
 }</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Edit_UlimPosMinus">
      <property name="geometry">
@@ -1444,6 +1477,9 @@ QPushButton:pressed
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -2772,6 +2808,12 @@ QPushButton:pressed
     </widget>
    </widget>
   </widget>
+  <zorder>stackedWidget_tip</zorder>
+  <zorder>Btn_back</zorder>
+  <zorder>Btn_limPosSet</zorder>
+  <zorder>Btn_safeAreaSet</zorder>
+  <zorder>stackedWidget</zorder>
+  <zorder>Btn_save</zorder>
  </widget>
  <resources>
   <include location="../resource.qrc"/>

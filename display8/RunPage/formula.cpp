@@ -10,6 +10,8 @@ Formula::Formula(QWidget *parent) :
 
     pWidget = static_cast<Widget*>(parent);
 
+    init();
+
     //返回运行界面
     connect(ui->Btn_back, &QPushButton::clicked, this, [=](){
         pWidget->backRunPage();
@@ -19,10 +21,10 @@ Formula::Formula(QWidget *parent) :
     for(int i = 0; i < 4; i++)
     {
         connect(Btn_Port_List.at(i), &QPushButton::clicked, this, [=](){
-            if(GP->Robot_Status == ACTION_STOP)
+            if(Global::Robot_Status == ACTION_STOP)
             {
-                GP->Temp_PF_Ionum = i;
-                pWidget->IOPortSetPage();
+                Global::Temp_PF_Ionum = i;
+                pWidget->InputPortSetPage();
             }
         });
     }
@@ -31,13 +33,13 @@ Formula::Formula(QWidget *parent) :
     for(int i = 0; i < 4; i++)
     {
         connect(Btn_Item_List.at(i), &QPushButton::clicked, this, [=](){
-            if(GP->Robot_Status == ACTION_STOP)
+            if(Global::Robot_Status == ACTION_STOP)
             {
-                GP->Temp_PF_Ionum = i;
-                GP->m_MD_Good_Page = 1;
+                Global::Temp_PF_Ionum = i;
+                Global::m_MD_Good_Page = 1;
 //                MD_NameGet(1);
                 pWidget->stackingPage();
-                GP->m_Choose_Good_Mode = 4;
+                Global::m_Choose_Good_Mode = 4;
             }
         });
     }
@@ -46,19 +48,19 @@ Formula::Formula(QWidget *parent) :
     for(int i = 0; i < 4; i++)
     {
         connect(Btn_Switch_List.at(i), &QPushButton::clicked, this, [=](){
-            if(GP->Robot_Status == ACTION_STOP)
+            if(Global::Robot_Status == ACTION_STOP)
             {
-                if(GP->PF_Parameter.pfSwitch[i] == 0)
+                if(Global::PF_Parameter.pfSwitch[i] == 0)
                 {
-                    GP->PF_Parameter.pfSwitch[i] = 1;
+                    Global::PF_Parameter.pfSwitch[i] = 1;
                 }
                 else
                 {
-                    GP->PF_Parameter.pfSwitch[i] = 0;
+                    Global::PF_Parameter.pfSwitch[i] = 0;
                 }
-                GP->m_PF_Refresh = TRUE;
-                PF_Refresh(GP->m_PF_Refresh);
-                GP->f_Send_PFPara();
+                Global::m_PF_Refresh = TRUE;
+                PF_Refresh();
+                Global::f_Send_PFPara();
             }
         });
     }
@@ -76,38 +78,44 @@ void Formula::init()
     Btn_Switch_List<<ui->Btn_OnOff1<<ui->Btn_OnOff2<<ui->Btn_OnOff3<<ui->Btn_OnOff4;
 }
 
-//配方设置刷新
-void Formula::PF_Refresh(u8 flag)
+//配方页面端口显示
+void Formula::dispIOPortText(u8 IOPort)
 {
-    if(flag == TRUE)
+    Global::PF_Parameter.pfIOnum[Global::Temp_PF_Ionum] = IOPort;
+    pWidget->formulaPage();
+    PF_Refresh();
+    Global::f_Send_PFPara();
+}
+
+//配方设置刷新
+void Formula::PF_Refresh()
+{
+    QString strName[PF_IONUM];
+    for(int i=0; i<PF_IONUM; i++)
     {
-        QString strName[PF_IONUM];
+        Global::Parameter_StringChang(Global::Temp_Display_Data1, 0,
+                                  Global::IO_Name_Parameter_Input[Global::PF_Parameter.pfIOnum[i]].Name,
+                                  Global::IO_Name_Parameter_Input[Global::PF_Parameter.pfIOnum[i]].Name1,
+                                  Global::IO_Name_Parameter_Input[Global::PF_Parameter.pfIOnum[i]].Name2);
+        Btn_Port_List.at(i)->setText(Global::u8toqstr(Global::Temp_Display_Data1, 12));
+        strName[i] = ProgramCode_String[Global::PF_Parameter.pfGood[i]];
+        Btn_Switch_List.at(i)->setText(PF_Switch[Global::PF_Parameter.pfSwitch[i]]);    //功能开关
+    }
+
+    for(int j=1; j<=MD_GOOD_PAGE_NUM; j++)
+    {
+//        MD_NameGet((j - 1) * MD_GOOD_PAGE_PER + 1);
         for(int i=0; i<PF_IONUM; i++)
         {
-            GP->Parameter_StringChang(GP->Temp_Display_Data1, 0,
-                                      GP->IO_Name_Parameter_Input[GP->PF_Parameter.pfIOnum[i]].Name,
-                                      GP->IO_Name_Parameter_Input[GP->PF_Parameter.pfIOnum[i]].Name1,
-                                      GP->IO_Name_Parameter_Input[GP->PF_Parameter.pfIOnum[i]].Name2);
-            Btn_Port_List.at(i)->setText(GP->u8toqstr(GP->Temp_Display_Data1, 12));
-            strName[i] = ProgramCode_String[GP->PF_Parameter.pfGood[i]];
-            Btn_Switch_List.at(i)->setText(PF_Switch[GP->PF_Parameter.pfSwitch[i]]);    //功能开关
-        }
-
-        for(int j=1; j<=MD_GOOD_PAGE_NUM; j++)
-        {
-//            MD_NameGet((j - 1) * MD_GOOD_PAGE_PER + 1);
-            for(int i=0; i<PF_IONUM; i++)
+            if(Global::PF_Parameter.pfGood[i] <= MD_GOOD_PAGE_PER * j && Global::PF_Parameter.pfGood[i] > MD_GOOD_PAGE_PER * (j - 1))
             {
-                if(GP->PF_Parameter.pfGood[i] <= MD_GOOD_PAGE_PER * j && GP->PF_Parameter.pfGood[i] > MD_GOOD_PAGE_PER * (j - 1))
-                {
-                    GP->Parameter_StringChang(GP->Temp_Display_Data1, 0, GP->sMD_Name[(GP->PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name,
-                                                                         GP->sMD_Name[(GP->PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name1,
-                                                                         GP->sMD_Name[(GP->PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name2);
-                    strName[i] += GP->u8toqstr(GP->Temp_Display_Data1, 12);
-                    Btn_Item_List.at(i)->setText(strName[i]);
-                }
+                Global::Parameter_StringChang(Global::Temp_Display_Data1, 0,
+                                              Global::sMD_Name[(Global::PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name,
+                                              Global::sMD_Name[(Global::PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name1,
+                                              Global::sMD_Name[(Global::PF_Parameter.pfGood[i] - 1) % MD_GOOD_PAGE_PER].Name2);
+                strName[i] += Global::u8toqstr(Global::Temp_Display_Data1, 12);
+                Btn_Item_List.at(i)->setText(strName[i]);
             }
         }
-        flag = FALSE;
     }
 }

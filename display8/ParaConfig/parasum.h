@@ -104,11 +104,11 @@ namespace MAINW {
 }
 
 //全局参数和函数汇总
-class GlobalPara
+class Global
 {
 public:
-    GlobalPara();
-    ~GlobalPara();
+    Global();
+    ~Global();
 
 public://RunPage
     static u32 Program_RunTime;				//程序单次运行时间
@@ -129,31 +129,31 @@ public://RunPage
 
 
 public://TeachPage
-    u8  gs_Current_Dispaly_Code[11];	    //当前显示的8个编码
+    static u8  gs_Current_Dispaly_Code[11];	    //当前显示的8个编码 !
     static u8  gs_Current_Dispaly_Point[11];	    //当前显示的轴命令的点编号
-    u32 gs_Code_Parameter_Display[11][3]; //编码命令对应的两位参数及显示
+    static u32 gs_Code_Parameter_Display[11][3]; //编码命令对应的两位参数及显示 !
     static u8 gs_IO_Instructions_Display_Refresh;
-    u8 SubProgram_Sequence;//当前保存的子程序序号
+    static u8 SubProgram_Sequence;//当前保存的子程序序号 !
     static u8 BlankChar[12];
-    u8 BlankChar48[48];
+    static u8 BlankChar48[48];     // !
     static u8 gs_Current_Dispaly_List[11]; 						//当前显示的8条指令
     static u8 gs_Current_Operate_List;	         					//当前蓝色背景所在的指令编号
     static u8 gs_Current_Program_Firstline;                        //显示框第一条指令的行数
     static u8 g_Refresh_Dispaly_List_Flag;	 					//刷新程序显示列表
-    u8 gs_Parameter_Unset;			 					//程序参数未设置
+    static u8 gs_Parameter_Unset;			 					//程序参数未设置 !
     static FreeProgram Program_Buffer;                           //用于缓存修改 添加是的程序指令参数
     static u8 Program_StringSplic[16];
     static u8 Parameter_Value[10];
-    s8 Parameter_ValueS[10];//有符号
+    static s8 Parameter_ValueS[10]; //有符号 !
     static u8 g_Current_Program_Debug;			 				//当前程序是否可以调试
     static u8 g_Program_Is_Debuging;			     			//程序调试中,所有按键失效
     static u8 g_Link_Debug;
     static u8 g_USART1_SendProgram_Flag;			 			//标志开始发送程序
     static u8 g_Current_Program_Modify; 			 			//修改
-    u8 g_SubPro_Value_Flag;						//子程序选择标志位
-    u8 Number_SubProgram;									//子程序序号 1-20
-    u8 Number_JUMP;										//跳转行号
-    u8 Number_While;										//循环次数
+    static u8 g_SubPro_Value_Flag;						//子程序选择标志位 !
+    static u8 Number_SubProgram;									//子程序序号 1-20 !
+    static u8 Number_JUMP;										//跳转行号 !
+    static u8 Number_While;										//循环次数 !
     static u8 gs_Free_Point_Display_Refresh; 					//坐标修改
 
 
@@ -163,14 +163,14 @@ public://DebugPage
 public://ManualPage
     static u32 gs_Manul_Axis_Position[AXIS_NUM];     //轴位置
     static u8 gs_Point_Display_Refresh_Step;
-    u8 gs_Save_Point_Num;	           			//当前保存点的编号,比实际编号小1,可做数组下标
+    static u8 gs_Save_Point_Num;	           			//当前保存点的编号,比实际编号小1,可做数组下标 !
     static u8 gs_Refresh_Speed_Para;	     		//速度-步进刷新
     static u8 g_Manul_Move_count;	                    //左右移连动计数
     static u8 g_Manul_Move_Flag;                	//手动移动标志位，用于是否协议握手
     static u8 g_Manul_Link_Flag;                	//连动操作，主要标志蜂鸣器
     static u8 Temp_Display_Data[12];
     static u8 Temp_Display_Data1[12];
-    u8 SavePoint_Group_Choose;  	  //选中第一组---该变量是第40页的组界面切换时显示的下标索引
+    static u8 SavePoint_Group_Choose;  	  //选中第一组---该变量是第40页的组界面切换时显示的下标索引 !
     static u8 g_Current_Choose_Group;	      //当前选择存储点的组别
     static u8 g_Current_Choose_Point;	      //当前选择点--存储点管理界面
     static u8 g_Current_Choose_Axsis;        //选中的是这个点的那个轴坐标
@@ -179,7 +179,7 @@ public://ManualPage
 
 public://SetPage
     static u8 gs_MDgripSetFlag;                     //码垛夹爪端口选择标志
-    SoftLimit  Temp_Soft_Limit[AXIS_NUM];
+    static SoftLimit  Temp_Soft_Limit[AXIS_NUM];   // !
     static SoftLimit  Robot_SoftLimit[AXIS_NUM];		//XZL软限位参数
     static SoftDistance  Robot_SoftDistance;
     static SoftDistance  Temp_SoftDistance;
@@ -198,11 +198,11 @@ public://SetPage
     static u8 gs_Refresh_MD_Circulation;    	//码垛循环方式
     static u8 Axis_Parameter_Select;  				//原点参数轴选择刷新显示
     static JXSParameter JXS_Parameter;
-    JXSParameter Temp_JXS_Parameter;
-    u8 Temp_ACC_Axis;
+    static JXSParameter Temp_JXS_Parameter;    // !
+    static u8 Temp_ACC_Axis;   // !
     static SCParameter SC_Parameter;		               		//生产参数
     static USERParameter USER_Parameter;		               	//用户变量
-    USERParameter Temp_USER_Parameter;
+    static USERParameter Temp_USER_Parameter;  // !
     static u8 g_USART1_DeletePoint_Flag;			 		//标志开始删除
     static u32  Admin_Pass_Word;
     static JDZParameter JDZ_Parameter;	//绝对值参数设定
@@ -226,7 +226,7 @@ public://SetPage
     static u8 m_MD_GasPort_Flag;		//气缸端口选择标志
     static u8 m_GoodOffset_Refresh;     //物料偏移刷新
     static PFParameter PF_Parameter;		//配方参数
-    u8 Temp_PF_Ionum;
+    static u8 Temp_PF_Ionum;   // !
     static u8 m_MD_Copy_Code;               //当前选择要拷贝的物品编号：1,2,3,...
     //笛卡尔坐标系相关参数
     static ST_Cartesian sCartesian_Para;
@@ -246,6 +246,7 @@ public://SetPage
 
     static PointCodeParameter Point_CodeParameter;
     static char Temp_CopyFileName[17];
+    static NamePara Copy_FileName;          //文件名称
     static u8 Current_Point_List;
 
     static u32 RealTimeCount;
@@ -255,9 +256,10 @@ public://SetPage
     static u8  gs_Point_Display_Refresh;
     static u8  g_FucSet_Axis_Num;
     static u8 gs_Temp_Point_Display_Refresh;
-    static InputIOParameter IO_Parameter[INPUT_NUM];
-    static InputIOParameter Temp_IO_Parameter[INPUT_NUM];
-    static s32 Modify_Point_Temp;    									//修改存储点时输入的坐标值
+    static u8 Temp_IO_Detect_Parameter;                     //当前选择的IO口号
+    static InputIOParameter IO_Parameter[INPUT_NUM];        //输入口参数保存
+    static InputIOParameter Temp_IO_Parameter[INPUT_NUM];   //修改的输入口参数
+    static s32 Modify_Point_Temp;    						//修改存储点时输入的坐标值
     static s32 Modify_MD_Point_Temp[AXIS_NUM];    		//修改存储点时输入的坐标值
     static u8 gs_Point_Modify_Refresh;    	//存储点修改弹框中的显示内容刷新
 
@@ -265,8 +267,8 @@ public://SetPage
 public://AlarmPage
     static AlarmHistory Alarm_History_Time[20];
     static AlarmHistoryDisplay Alarm_History_Display[21];
-    u8 Cur_Alarm_Page;      //报警页
-    u8 gs_Robot_Error_Flag;
+    static u8 Cur_Alarm_Page;      //报警页    !
+    static u8 gs_Robot_Error_Flag; // !
     static u8 g_Alarm_Buzzer;
     static u8 g_Alarm_Buzzer_Timer;
     static u8 g_Alarm_Buzzer_Count;
@@ -408,36 +410,69 @@ public://Parameter
     static u8 UnLock_RequestDecrypt;					//请求解密标志
     static u8 CheckBatterySta;								//电池拔出标志，1拔出，0没拔出
 
+    static u8  Axsis_Robot_Origined[AXIS_NUM];//各个轴回零完成标志位				绝对值优化20210304zcx
+
+    static u8  InitDataTimeFlag;														//加密锁初始时间标志开机默认需要初始化
+    static u32 InitDataTime;														//加密锁初始时间，单位s
+    static u8  UnLock_Forever_flag[UnLock_Jurisd_Num];								//加密锁不同权限的长期有效标志位
+    static u32 CurSystemTime;																	//当前读到的系统时间
+    static u32 UnLock_EndTime[UnLock_Jurisd_Num];  									//加密锁不同权限的结束时间
+    static u32 UnLock_LastSystemTime;  												//上次开机的系统时间
+
+    static u8  MachineNumFlag[UnLock_Jurisd_Num];			//加密锁不同权限的机器编码已设标志
+    static u32 MachineNum[UnLock_Jurisd_Num];		//加密锁不同权限的机器编码
+
+    static u32 Unlock_SurplusDays[UnLock_Jurisd_Num];	//加密锁不同权限的剩余天数
+
+    static u8  UnLock_CurJurisType;														//当前权限 0开发者 1代理商 2机器厂商
+
+    static u16 DecryptMachineDays;															//解密后得到的解密天数
+    static u32 DecryptMachineQueueNum;													//解密后得到的机器编码
+    static u32 DecryptMachinePassword;													//解密用的解密密码
+    static u32 MachineQueueNum;
+
+    //解密用的解密编码
+    static u32 MachineNumInPut;																//解密用的机器编码
+
+    static u8 Beyond_Black[25];
+
 public:
-    QString u8toqstr(u8* data, int size);
+    static QString u8toqstr(u8* data, int size);
+    static u8 ValSwitch(u8 val);
 
-    void Robot_Init();
+    static void Robot_Init();
+    static void Para_Rst();
 
-    void IOName_To_FreeIO(IONameParameter IOName, IONameParameter* P_IOName);
-    void f_SendSystemPara();
-    void f_SendInternetPara();
-    void f_Send_PFPara();
-    void f_Send_SCPara();
-    void f_send_Cartesian();
-    void f_Send_MDPara(u8 code);
-    void f_Send_MDPoint(u8 code, u8 layer, u8 pcode);
-    void Parameter_StringChang(u8 *string, u16 startIdx, u32 name1, u32 name2, u32 name3);
-    void Parameter_StringChang_Min(u8 *string, u16 startIdx, u32 name1, u32 name2, u32 name3);
-    void USER_PARAMETER(u8 type, u8 num);
-    u8 JudgLetterDigit(u8 data);
+    static void IOName_To_FreeIO(IONameParameter IOName, IONameParameter* P_IOName);
+    static void f_SendSystemPara();
+    static void f_SendInternetPara();
+    static void f_Send_PFPara();
+    static void f_Send_SCPara();
+    static void f_send_Cartesian();
+    static void f_Send_MDPara(u8 code);
+    static void MD_ParaGet(u8 code);
+    static void f_Send_MDPoint(u8 code, u8 layer, u8 pcode);
+    static void MD_PointGet(u8 code, u8 layer, u8 start_pcode);
+    static void Parameter_StringChang(u8 *string, u16 startIdx, u32 name1, u32 name2, u32 name3);
+    static void Parameter_StringChang_Min(u8 *string, u16 startIdx, u32 name1, u32 name2, u32 name3);
+    static void USER_PARAMETER(u8 type, u8 num);
+    static u8 JudgLetterDigit(u8 data);
 
 
-    void JXS_Para_Save();
-    void JXS_Temp_Save();
-    void JDZ_Para_Save();
-    void JDZ_Temp_Save();
-    void OP_Para_Save();
-    void OP_Temp_Save();
-    void USER_Para_Save();
-    void USER_Temp_Save();
+    static void JXS_Para_Save();
+    static void JXS_Temp_Save();
+    static void JDZ_Para_Save();
+    static void JDZ_Temp_Save();
+    static void OP_Para_Save();
+    static void OP_Temp_Save();
+    static void USER_Para_Save();
+    static void USER_Temp_Save();
+    static void LP_Temp_Save();
 
-    void LimPos_Para_Save();
-    void LimPos_Temp_Save();
+    static void LimPos_Para_Save();
+    static void LimPos_Temp_Save();
+    static u8 getTemp_IO_Detect_Parameter();
+    static void setTemp_IO_Detect_Parameter(const u8 &value);
 };
 
 #endif // PARASUM_H

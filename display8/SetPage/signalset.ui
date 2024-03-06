@@ -6812,7 +6812,7 @@ QPushButton:pressed
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>160</y>
+       <y>150</y>
        <width>21</width>
        <height>51</height>
       </rect>
@@ -6915,6 +6915,9 @@ QPushButton:pressed
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="Edit_TimeStart">
@@ -7249,6 +7252,9 @@ QPushButton:pressed
     border-color:#B4B6BC; /*边框颜色*/
     border-radius:10px; /*边框倒角*/
 }</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_20">

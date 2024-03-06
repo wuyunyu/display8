@@ -15,18 +15,16 @@ class ProdPara : public QWidget
 {
     Q_OBJECT
 
-    friend class Stacking;
-
 public:
     explicit ProdPara(QWidget *parent = nullptr);
     ~ProdPara();
 
+public:
+    void Reflash_Run_MD();
 
-
-private:
+public:
     Ui::ProdPara *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

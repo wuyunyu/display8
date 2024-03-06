@@ -24,9 +24,9 @@ public:
 
     void init();
 
-private:
+public:
     Ui::MemoryPoint *ui;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

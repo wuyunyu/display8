@@ -20,9 +20,9 @@ public:
 
     void switchEditDialog(const int dialogID);
 
-private:
+public:
     Ui::EditDialog *ui;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

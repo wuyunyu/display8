@@ -18,7 +18,7 @@ AlarmPage::~AlarmPage()
 void AlarmPage::init()
 {
     ui->table_alarm->setColumnWidth(0, 60);
-    ui->table_alarm->setColumnWidth(1,120);
+    ui->table_alarm->setColumnWidth(1, 120);
     ui->table_alarm->setColumnWidth(2, 120);
 }
 

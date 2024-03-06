@@ -2,6 +2,7 @@
 #include "ui_mainWidget.h"
 #include "ui_sysset.h"
 #include "ui_signalset.h"
+#include "ui_progset.h"
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -9,7 +10,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->init();
+    init();
 
     /////////////////////////////权限登录界面开始/////////////////////////////
     connect(ui->Btn_admin, &QPushButton::clicked, this, [=](){
@@ -43,6 +44,7 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->show();
         ui->Btn_progSel->hide();
         ui->Btn_coordSwitch->hide();
+        Global::LCD_Main_Page = START_UP;
     });
     connect(ui->Btn_TeachHome, &QPushButton::clicked, this, [=](){
         ui->stackedWidget_sub->setCurrentWidget(TeachPage_ui);
@@ -50,6 +52,7 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->hide();
         ui->Btn_progSel->show();
         ui->Btn_coordSwitch->hide();
+        Global::LCD_Main_Page = FREE_PROGRAMME;
     });
     connect(ui->Btn_DebugHome, &QPushButton::clicked, this, [=](){
         ui->stackedWidget_sub->setCurrentWidget(DebugPage_ui);
@@ -57,6 +60,7 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->hide();
         ui->Btn_progSel->hide();
         ui->Btn_coordSwitch->hide();
+        Global::LCD_Main_Page = IO_CONTROL;
     });
     connect(ui->Btn_ManualHome, &QPushButton::clicked, this, [=](){
         ui->stackedWidget_sub->setCurrentWidget(ManualPage_ui);
@@ -64,7 +68,8 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->hide();
         ui->Btn_progSel->hide();
         ui->Btn_coordSwitch->show();
-        this->Manual();
+        Global::LCD_Main_Page = MANUL_DEBUG;
+        Manual();
     });
     connect(ui->Btn_SetHome, &QPushButton::clicked, this, [=](){
         ui->stackedWidget_sub->setCurrentWidget(SetPage_ui);
@@ -72,6 +77,7 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->hide();
         ui->Btn_progSel->hide();
         ui->Btn_coordSwitch->hide();
+        Global::LCD_Main_Page = SYSTEM_SETTING;     //标志为从设置界面进入个设置子界面
     });
     connect(ui->Btn_AlarmHome, &QPushButton::clicked, this, [=](){
         ui->stackedWidget_sub->setCurrentWidget(AlarmPage_ui);
@@ -79,6 +85,7 @@ Widget::Widget(QWidget *parent)
         ui->Btn_formula->hide();
         ui->Btn_progSel->hide();
         ui->Btn_coordSwitch->hide();
+        Global::LCD_Main_Page = ALARM_HISTORY;
     });
     ////////////////////////////////////////导航主界面结束////////////////////////////////////////
 }
@@ -91,7 +98,8 @@ Widget::~Widget()
 
 void Widget::init()
 {
-    this->setFixedSize(QSize(1024,768));
+    setFixedSize(QSize(1024,768));
+    Label_Axis_Pos<<ui->label_X<<ui->label_Y<<ui->label_Z<<ui->label_O;
 
     //开辟需要调用的子窗体空间
     RunPage_ui = new RunPage(this); //把父类窗口的指针传给子窗口
@@ -147,28 +155,27 @@ void Widget::init()
     ui->stackedWidget_teachDialog->addWidget(EditTeach_ui);
     ui->stackedWidget_teachDialog->addWidget(EditDialog_ui);
 
-    GP = new GlobalPara();
     isAdmin = false;
     ui->stackedWidget->setCurrentIndex(1);
 
-    GP->Robot_Init();
-    if(GP->StartUp_Password_Dis)
+    Global::Robot_Init();
+    if(Global::StartUp_Password_Dis)
     {//有开机密码
-        ui->Btn_admin->setText(Admin_Authority_Dis[GP->Admin_Authority]);
-        ui->Btn_user->setText(Admin_Authority_Dis[GP->Admin_Authority]);
+        ui->Btn_admin->setText(Admin_Authority_Dis[Global::Admin_Authority]);
+        ui->Btn_user->setText(Admin_Authority_Dis[Global::Admin_Authority]);
         ui->Edit_code->clear(); //清除登录密码显示
         ui->stackedWidget->setCurrentIndex(0);
         ui->stackedWidget_main->setCurrentIndex(Login_id);
         ui->stackedWidget_login->setCurrentIndex(0);
-        GP->StartUp_Password = TRUE;
-        GP->gs_Reflash_Fuction_JXS = TRUE;
+        Global::StartUp_Password = TRUE;
+        Global::gs_Reflash_Fuction_JXS = TRUE;
     }
     else
     {//无开机密码
         ui->stackedWidget->setCurrentIndex(0);
         ui->stackedWidget_main->setCurrentIndex(Main_id);
         ui->stackedWidget_sub->setCurrentWidget(RunPage_ui);
-        GP->gs_Reflash_Fuction_JXS = TRUE;
+        Global::gs_Reflash_Fuction_JXS = TRUE;
     }
 
     //初始界面（运行子界面）
@@ -187,7 +194,15 @@ void Widget::init()
     ui->Edit_code->addAction(actionCode, QLineEdit::LeadingPosition);
 }
 
-//为运行界面提供跳转生产参数界面的函数(ProdPara类调用)
+//进入配方参数界面
+void Widget::formulaPage()
+{
+    ui->stackedWidget_main->setCurrentIndex(SubRun_id);
+    ui->stackedWidget_subRun->setCurrentWidget(Formula_ui);
+    ui->Btn_formula->hide();
+}
+
+//进入生产参数界面
 void Widget::prodParaPage()
 {
     ui->stackedWidget_main->setCurrentIndex(SubRun_id);
@@ -195,7 +210,7 @@ void Widget::prodParaPage()
     ui->Btn_formula->hide();
 }
 
-//为配方界面和生产参数界面提供返回运行界面的函数(Formula和ProdPara类调用)
+//返回运行界面
 void Widget::backRunPage()
 {
     ui->stackedWidget_main->setCurrentIndex(Main_id);
@@ -203,21 +218,21 @@ void Widget::backRunPage()
     ui->Btn_formula->show();
 }
 
-//为设置界面提供切换主界面的函数(SetPage类调用)
+//进入设置界面的具体子设置界面
 void Widget::changeSetPage(const int selSetPage)
 {
     ui->stackedWidget_main->setCurrentIndex(SubSet_id);
     ui->stackedWidget_selSet->setCurrentIndex(selSetPage);
 }
 
-//为各设置子界面提供返回设置界面的函数(各个设置类调用)
+//返回设置界面
 void Widget::backSetPage()
 {
     ui->stackedWidget_main->setCurrentIndex(Main_id);
     ui->stackedWidget_sub->setCurrentWidget(SetPage_ui);
 }
 
-//为选择程序提供返回编程界面的函数(ProgSet类调用)
+//返回编程界面
 void Widget::backTeachPage()
 {
     ui->stackedWidget_main->setCurrentIndex(Main_id);
@@ -225,50 +240,37 @@ void Widget::backTeachPage()
     ui->Btn_progSel->show();
 }
 
-//为手动界面提供进入码垛管理界面的函数(ManualPage类调用)
+//进入码垛管理界面
 void Widget::stackingPage()
 {
     ui->stackedWidget_main->setCurrentIndex(SubManual_id);
     ui->stackedWidget_subManual->setCurrentWidget(Stacking_ui);
-    GP->m_Reflash_Name_MD = TRUE;
-    Stacking_ui->Reflash_Name_MD(GP->m_Reflash_Name_MD);
+    Global::m_Reflash_Name_MD = TRUE;
+    Stacking_ui->Reflash_Name_MD();
 }
 
-
-//为码垛管理界面提供进入码垛参数界面的函数(Stacking类调用)
+//进入码垛参数界面
 void Widget::stackParaPage()
 {
+    ui->stackedWidget_main->setCurrentIndex(SubManual_id);
     ui->stackedWidget_subManual->setCurrentWidget(StackPara_ui);
 }
 
-//为手动界面的码垛参数界面提供返回码垛管理界面的函数(StackPara类调用)
-void Widget::backStackingPage()
-{
-    ui->stackedWidget_main->setCurrentIndex(SubManual_id);
-    ui->stackedWidget_subManual->setCurrentWidget(Stacking_ui);
-}
-
-//为码垛参数界面提供进入码垛坐标设置界面的函数(StackPara类调用)
+//进入码垛坐标设置界面
 void Widget::stackSetPage()
 {
+    ui->stackedWidget_main->setCurrentIndex(SubManual_id);
     ui->stackedWidget_subManual->setCurrentWidget(StackSet_ui);
 }
 
-//为手动界面的码垛坐标设置界面提供返回码垛参数界面的函数(StackSet类调用)
-void Widget::backStackParaPage()
-{
-    ui->stackedWidget_main->setCurrentIndex(SubManual_id);
-    ui->stackedWidget_subManual->setCurrentWidget(StackPara_ui);
-}
-
-//为手动界面提供进入存储点界面的函数(ManualPage类调用)
+//进入存储点界面
 void Widget::memoryPointPage()
 {
     ui->stackedWidget_main->setCurrentIndex(SubManual_id);
     ui->stackedWidget_subManual->setCurrentWidget(MemoryPoint_ui);
 }
 
-//为码垛管理界面和存储点界面提供返回手动界面的函数(MemoryPoint和Stacking类调用)
+//返回手动界面
 void Widget::backManualPage()
 {
     ui->stackedWidget_main->setCurrentIndex(Main_id);
@@ -288,20 +290,46 @@ void Widget::FreeProgPage()
 void Widget::backEditTeachPage()
 {
     ui->stackedWidget_main->setCurrentIndex(Main_id);
-    ui->stackedWidget_sub->setCurrentWidget(EditTeach_ui);
+    ui->stackedWidget_sub->setCurrentWidget(TeachPage_ui);
+    ui->stackedWidget_teachDialog->setCurrentWidget(EditTeach_ui);
     ui->stackedWidget_teachDialog->show();
     ui->Btn_progSel->show();
 }
 
 //直接进入设置下的输入信号设置界面
-void Widget::IOPortSetPage()
+void Widget::InputPortSetPage()
 {
     ui->stackedWidget_main->setCurrentIndex(SubSet_id);
     ui->stackedWidget_selSet->setCurrentWidget(SignalSet_ui);
     SignalSet_ui->InputSetPage();
 }
 
-//为编程界面提供弹出对话框的函数(TeachPage类调用)
+//直接进入设置下的输出信号设置界面
+void Widget::OutputPortSetPage()
+{
+    ui->stackedWidget_main->setCurrentIndex(SubSet_id);
+    ui->stackedWidget_selSet->setCurrentWidget(SignalSet_ui);
+    SignalSet_ui->OutputSetPage();
+}
+
+//跳转至程序管理设置界面的拷贝选择页面
+void Widget::progCopySelPage()
+{
+    ui->stackedWidget_main->setCurrentIndex(SubSet_id);
+    ui->stackedWidget_selSet->setCurrentWidget(ProgSet_ui);
+    ProgSet_ui->ui->stackedWidget->setCurrentIndex(CopySel_id);
+}
+
+//跳转至程序管理设置界面的拷贝提示弹窗页面
+void Widget::progCopyTipPage()
+{
+    ui->stackedWidget_main->setCurrentIndex(SubSet_id);
+    ui->stackedWidget_selSet->setCurrentWidget(ProgSet_ui);
+    ProgSet_ui->ui->stackedWidget->setCurrentIndex(5);
+    ProgSet_ui->ui->stackedWidget_tip->setCurrentIndex(0);
+}
+
+//为编程界面提供弹出对话框的函数
 void Widget::showEditTeach(const int DialogID)
 {
     EditTeach_ui->switchDialog(DialogID);   //根据编程界面按钮对应的ID切换对话框的内容页面
@@ -337,7 +365,7 @@ void Widget::editTeachDialogEnd()
 }
 
 //系统设定界面绝对值保存后跳转权限登入界面函数
-void Widget::JDZ_Para_Save()
+void Widget::JDZParaSaveAuthority()
 {
     ui->stackedWidget_main->setCurrentIndex(Login_id);
     ui->stackedWidget_login->setCurrentIndex(1);
@@ -399,15 +427,15 @@ void Widget::f_Axis_Position_Refresh(u8 flag)
     {//必须重新刷新
         for(i=0; i<AXIS_NUM; i++)
         {
-            MAINW::gs_StartUp_Axis_Position[i] = GP->g_Axis_Position[i] + 1;
+            MAINW::gs_StartUp_Axis_Position[i] = Global::g_Axis_Position[i] + 1;
         }
     }
 
-    if(GP->Robot_Origined == 1 && GP->g_AxiseCarteType == 1)
+    if(Global::Robot_Origined == 1 && Global::g_AxiseCarteType == 1)
     {
         for(i=0; i<AXIS_NUM; i++)
         {
-            if(MAINW::gs_StartUp_Axis_Position[i] != GP->g_Axis_Position[i])
+            if(MAINW::gs_StartUp_Axis_Position[i] != Global::g_Axis_Position[i])
             {//轴位置刷新，需要刷新坐标显示
                 posChangeFlag = 1;
                 break;
@@ -418,14 +446,14 @@ void Widget::f_Axis_Position_Refresh(u8 flag)
         {
             for(i=0; i<AXIS_NUM; i++)
             {//将脉冲坐标转换成距离，单位0.01mm
-                MAINW::gs_StartUp_Axis_Position[i] = GP->g_Axis_Position[i];
-                point[i] = MAINW::gs_StartUp_Axis_Position[i] * 100 / GP->Axis_Step_Coefficient[i].Step_Coefficient;
+                MAINW::gs_StartUp_Axis_Position[i] = Global::g_Axis_Position[i];
+                point[i] = MAINW::gs_StartUp_Axis_Position[i] * 100 / Global::Axis_Step_Coefficient[i].Step_Coefficient;
             }
 
             mMD.MD_PosSolCal(point, tarPoint);
             for(i=0; i<AXIS_NUM; i++)
             {
-                //WriteNum4(0x1018 + i * 2, tarPoint[i]);
+                Label_Axis_Pos.at(i)->setText(QString::number(tarPoint[i]));
             }
         }
     }
@@ -433,10 +461,10 @@ void Widget::f_Axis_Position_Refresh(u8 flag)
     {
         for(i=0; i<AXIS_NUM; i++)
         {
-            if(MAINW::gs_StartUp_Axis_Position[i] != GP->g_Axis_Position[i])
+            if(MAINW::gs_StartUp_Axis_Position[i] != Global::g_Axis_Position[i])
             {//轴位置刷新
-                MAINW::gs_StartUp_Axis_Position[i] = GP->g_Axis_Position[i];
-                //WriteNum4(0x1018 + i * 2, MAINW::gs_StartUp_Axis_Position[i] * 100 / GP->Axis_Step_Coefficient[i].Step_Coefficient - GP->JXS_Parameter.OriginOffset[i]);
+                MAINW::gs_StartUp_Axis_Position[i] = Global::g_Axis_Position[i];
+                Label_Axis_Pos.at(i)->setText(QString::number(MAINW::gs_StartUp_Axis_Position[i] * 100 / Global::Axis_Step_Coefficient[i].Step_Coefficient - Global::JXS_Parameter.OriginOffset[i]));
             }
         }
     }
@@ -447,9 +475,9 @@ void Widget::AxiseCarteType_Refresh(u8 flag)
 {
     if(flag == TRUE)
     {
-        ui->Btn_coordSwitch->setText(g_AxiseCarteTypeString[GP->g_AxiseCarteType]);
-        GP->gs_AxiseCarteType_Refresh = FALSE;
-        this->f_Axis_Position_Refresh(1);
+        ui->Btn_coordSwitch->setText(g_AxiseCarteTypeString[Global::g_AxiseCarteType]);
+        Global::gs_AxiseCarteType_Refresh = FALSE;
+        f_Axis_Position_Refresh(1);
     }
 }
 
@@ -484,37 +512,37 @@ void Widget::on_Btn_exitScreenSaver_clicked()
 //绝对值保存密码确定
 void Widget::on_Btn_absValParaOk_clicked()
 {
-    if((GP->Admin_Authority == 1) && (GP->PassWord_Input_Done == TRUE) && (GP->Pass_Word[1] == GP->Pass_Word_Temp))
+    if((Global::Admin_Authority == 1) && (Global::PassWord_Input_Done == TRUE) && (Global::Pass_Word[1] == Global::Pass_Word_Temp))
     {//“管理员权限”登录密码正确
         ui->stackedWidget_main->setCurrentIndex(SubSet_id);
         ui->stackedWidget_selSet->setCurrentWidget(SysSet_ui);
 
-        GP->PassWord_Input_Done = FALSE;
-        GP->Pass_Word_Temp = 0;
+        Global::PassWord_Input_Done = FALSE;
+        Global::Pass_Word_Temp = 0;
         SysSet_ui->JDZ_Tips1();    //绝对值参数保存中
 
-        if(GP->Temp_JDZ_Parameter.Switch == 1)
+        if(Global::Temp_JDZ_Parameter.Switch == 1)
         {
-            GP->Internet_Parameter.Switch = 0;
-            GP->f_SendInternetPara();
+            Global::Internet_Parameter.Switch = 0;
+            Global::f_SendInternetPara();
         }
 
-        if(GP->JDZ_Parameter.Switch != GP->Temp_JDZ_Parameter.Switch || GP->JDZ_Parameter.Server != GP->Temp_JDZ_Parameter.Server )
+        if(Global::JDZ_Parameter.Switch != Global::Temp_JDZ_Parameter.Switch || Global::JDZ_Parameter.Server != Global::Temp_JDZ_Parameter.Server )
         {//绝对值开关或者伺服电机发生改变是需要提示重启系统
             for(int i=0; i<AXIS_NUM; i++)
             {
-                GP->JDZ_Parameter.OriginSetting[i] = 0;
+                Global::JDZ_Parameter.OriginSetting[i] = 0;
             }
-            GP->JDZ_Para_Save();
+            Global::JDZ_Para_Save();
             SysSet_ui->JDZ_Tips2();																//重新启动界面
         }
         else
         {
-            GP->JDZ_Para_Save();
+            Global::JDZ_Para_Save();
             SysSet_ui->JDZ_ModBack();												//绝对值参数设置界面
         }
         SET::gs_Reflash_Save_JDZ = TRUE;
-        SysSet_ui->Reflash_Save_JDZ(SET::gs_Reflash_Save_JDZ);
+        SysSet_ui->Reflash_Fuction_JDZ(1);
     }
     else
     {//弹出提示框-密码错误
@@ -529,8 +557,8 @@ void Widget::on_Btn_absValParaCancel_clicked()
     ui->stackedWidget_main->setCurrentIndex(SubSet_id);
     ui->stackedWidget_selSet->setCurrentWidget(SysSet_ui);
     SysSet_ui->JDZ_ModBack();
-    GP->gs_Reflash_Fuction_JDZ = TRUE;
-    SysSet_ui->Reflash_Fuction_JDZ(GP->gs_Reflash_Fuction_JDZ);
+    Global::gs_Reflash_Fuction_JDZ = TRUE;
+    SysSet_ui->Reflash_Fuction_JDZ(0);
 }
 
 //弹出提示框-密码错误后返回密码输入界面

@@ -14,14 +14,13 @@ class DebugPage : public QWidget
 
 public:
 
-
 public:
     explicit DebugPage(QWidget *parent = nullptr);
     ~DebugPage();
 
     void init();
 
-private:
+public:
     Ui::DebugPage *ui;
 };
 

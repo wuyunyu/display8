@@ -32,13 +32,13 @@ u8 MD::MD_PosSolCal(s32 *point, s32 *tarPoint)
     {//求出每个轴旋转的角度
         tarPoint[i] = point[i];
 
-        if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
         {
-            offsetPostion[i] = point[i] - GP->JXS_Parameter.OriginOffset[i];
+            offsetPostion[i] = point[i] - Global::JXS_Parameter.OriginOffset[i];
         }
         else
         {
-            offsetPostion[i] = GP->JXS_Parameter.OriginOffset[i] - point[i];
+            offsetPostion[i] = Global::JXS_Parameter.OriginOffset[i] - point[i];
         }
 
         if(offsetPostion == 0)
@@ -52,31 +52,31 @@ u8 MD::MD_PosSolCal(s32 *point, s32 *tarPoint)
     }
 
 
-    screw = GP->sCartesian_Para.pitchLength / 100.0f;
-    ret = ScaraForwardKinematics(GP->sCartesian_Para.length[0] / 100.0f, GP->sCartesian_Para.length[1] / 100.0f, screw, sJointAngle, &sJointPos);//正解
+    screw = Global::sCartesian_Para.pitchLength / 100.0f;
+    ret = ScaraForwardKinematics(Global::sCartesian_Para.length[0] / 100.0f, Global::sCartesian_Para.length[1] / 100.0f, screw, sJointAngle, &sJointPos);//正解
     if(ret)
     {
         return 1;
     }
 
-    if(GP->sCartesian_Para.axisType[X_AXIS] == 1)
+    if(Global::sCartesian_Para.axisType[X_AXIS] == 1)
     {//显示成长度单位，单位0.01mm
         tarPoint[X_AXIS] = sJointPos.x * 100;
     }
-    if(GP->sCartesian_Para.axisType[L_AXIS] == 1)
+    if(Global::sCartesian_Para.axisType[L_AXIS] == 1)
     {//显示成长度单位，单位0.01mm
         tarPoint[L_AXIS] = sJointPos.y * 100;
     }
 
-    tarPoint[Z_AXIS] = point[Z_AXIS] - GP->JXS_Parameter.OriginOffset[Z_AXIS];
+    tarPoint[Z_AXIS] = point[Z_AXIS] - Global::JXS_Parameter.OriginOffset[Z_AXIS];
 
-    if(GP->sCartesian_Para.axisType[O_AXIS] == 1)
+    if(Global::sCartesian_Para.axisType[O_AXIS] == 1)
     {//显示成角度，单位0.01°
         tarPoint[O_AXIS] = offsetPostion[O_AXIS] + offsetPostion[X_AXIS] + offsetPostion[L_AXIS];
     }
     else
     {
-        tarPoint[O_AXIS] = point[O_AXIS] - GP->JXS_Parameter.OriginOffset[O_AXIS];
+        tarPoint[O_AXIS] = point[O_AXIS] - Global::JXS_Parameter.OriginOffset[O_AXIS];
     }
 
     return 0;
@@ -110,13 +110,13 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
     {//求出每个轴旋转的角度
         pointTemp[i] = tarPoint[i] = point[i];
 
-        if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
         {
-            offsetPostion[i] = point[i] - GP->JXS_Parameter.OriginOffset[i];
+            offsetPostion[i] = point[i] - Global::JXS_Parameter.OriginOffset[i];
         }
         else
         {
-            offsetPostion[i] = GP->JXS_Parameter.OriginOffset[i] - point[i];
+            offsetPostion[i] = Global::JXS_Parameter.OriginOffset[i] - point[i];
         }
 
         if(offsetPostion[i] == 0)
@@ -132,9 +132,9 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
     flagJ1 = ScaraFindFlagJ1(sJointAngle1.theta[0]);
     flagJ2 = ScaraFindFlagJ2(sJointAngle1.theta[1]);
     handcoor = ScaraFindHandcoor(sJointAngle1.theta[1]);
-    screw = GP->sCartesian_Para.pitchLength / 100.0f;
+    screw = Global::sCartesian_Para.pitchLength / 100.0f;
 
-    ret = ScaraForwardKinematics(GP->sCartesian_Para.length[0] / 100.0f, GP->sCartesian_Para.length[1] / 100.0f,
+    ret = ScaraForwardKinematics(Global::sCartesian_Para.length[0] / 100.0f, Global::sCartesian_Para.length[1] / 100.0f,
             screw, sJointAngle1, &sJointPos);//正解
     if(ret)
     {
@@ -160,7 +160,7 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
 
     sJointPos.z = 0.0f;
 
-    ret = ScaraInverseKinematics(GP->sCartesian_Para.length[0] / 100.0f, GP->sCartesian_Para.length[1] / 100.0f,
+    ret = ScaraInverseKinematics(Global::sCartesian_Para.length[0] / 100.0f, Global::sCartesian_Para.length[1] / 100.0f,
             screw, sJointPos, handcoor, flagJ1, flagJ2, &sJointAngle2);//逆解
     if(ret)
     {
@@ -171,20 +171,20 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
 
     for(i=0; i<AXIS_NUM; i++)
     {
-        if(i != Z_AXIS && GP->sCartesian_Para.axisType[i] == 1)
+        if(i != Z_AXIS && Global::sCartesian_Para.axisType[i] == 1)
         {//轴类型为旋转轴时，即为笛卡尔坐标系中的轴需要转换，其他轴只需要进行直线偏移
             offsetPostion[i] = sJointAngle2.theta[i] * 18000.0f / SCARA_PI;
 
-            if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+            if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
             {
-                tarPoint[i] = offsetPostion[i] + GP->JXS_Parameter.OriginOffset[i];
+                tarPoint[i] = offsetPostion[i] + Global::JXS_Parameter.OriginOffset[i];
             }
             else
             {
-                tarPoint[i] = GP->JXS_Parameter.OriginOffset[i] - offsetPostion[i];
+                tarPoint[i] = Global::JXS_Parameter.OriginOffset[i] - offsetPostion[i];
             }
 
-            if(tarPoint[i] < 0 || (GP->Robot_SoftLimit[i].Switch_Limit == TRUE && tarPoint[i] > static_cast<int>(GP->Robot_SoftLimit[i].Right_Limit)))
+            if(tarPoint[i] < 0 || (Global::Robot_SoftLimit[i].Switch_Limit == TRUE && tarPoint[i] > static_cast<int>(Global::Robot_SoftLimit[i].Right_Limit)))
             {//计算出的坐标不在安全区内，需要更换手系重新计算
                 handturn_flag = 1;
                 break;
@@ -196,11 +196,11 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
         }
     }
 
-    if(GP->sCartesian_Para.axisType[O_AXIS] == 1)
+    if(Global::sCartesian_Para.axisType[O_AXIS] == 1)
     {//如果O轴为旋转轴时，需要对Z轴进行补偿
         i = Z_AXIS;
         offsetPostion[i] = sJointAngle2.theta[Z_AXIS] * 180 * screw * 100 / SCARA_PI / 360;					//计算需要补偿的Z轴高度
-        if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
         {
             tarPoint[i] = offsetPostion[i] + pointTemp[i];
         }
@@ -212,7 +212,7 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
     else
     {//其他轴只需要进行直线偏移
         i = Z_AXIS;
-        tarPoint[i] = pointTemp[i] + GP->sMD_Parameter.goodOffset[i];
+        tarPoint[i] = pointTemp[i] + Global::sMD_Parameter.goodOffset[i];
     }
 
     if(handturn_flag == 1)
@@ -227,7 +227,7 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
         }
 
         //不考虑Z轴，screw=0
-        ret = ScaraInverseKinematics(GP->sCartesian_Para.length[0] / 100.0f, GP->sCartesian_Para.length[1] / 100.0f,
+        ret = ScaraInverseKinematics(Global::sCartesian_Para.length[0] / 100.0f, Global::sCartesian_Para.length[1] / 100.0f,
                 screw, sJointPos, handcoor, flagJ1, flagJ2, &sJointAngle2);//逆解
         if(ret)
         {
@@ -238,20 +238,20 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
 
         for(i=0; i<AXIS_NUM; i++)
         {
-            if(i != Z_AXIS && GP->sCartesian_Para.axisType[i] == 1)
+            if(i != Z_AXIS && Global::sCartesian_Para.axisType[i] == 1)
             {//轴类型为旋转轴时，即为笛卡尔坐标系中的轴需要转换，其他轴只需要进行直线偏移
                 offsetPostion[i] = sJointAngle2.theta[i] * 18000.0f / SCARA_PI;
 
-                if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+                if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
                 {
-                    tarPoint[i] = offsetPostion[i] + GP->JXS_Parameter.OriginOffset[i];
+                    tarPoint[i] = offsetPostion[i] + Global::JXS_Parameter.OriginOffset[i];
                 }
                 else
                 {
-                    tarPoint[i] = GP->JXS_Parameter.OriginOffset[i] - offsetPostion[i];
+                    tarPoint[i] = Global::JXS_Parameter.OriginOffset[i] - offsetPostion[i];
                 }
 
-                if(tarPoint[i] < 0 || (GP->Robot_SoftLimit[i].Switch_Limit == TRUE && tarPoint[i] > static_cast<int>(GP->Robot_SoftLimit[i].Right_Limit)))
+                if(tarPoint[i] < 0 || (Global::Robot_SoftLimit[i].Switch_Limit == TRUE && tarPoint[i] > static_cast<int>(Global::Robot_SoftLimit[i].Right_Limit)))
                 {//计算出的坐标不在安全区内，报警
                     return 1;
                 }
@@ -263,11 +263,11 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
         }
     }
 
-    if(GP->sCartesian_Para.axisType[O_AXIS] == 1)
+    if(Global::sCartesian_Para.axisType[O_AXIS] == 1)
     {//如果O轴为旋转轴时，需要对Z轴进行补偿
         i = Z_AXIS;
         offsetPostion[i] = sJointAngle2.theta[Z_AXIS] * 180 * screw * 100 / SCARA_PI / 360;					//计算需要补偿的Z轴高度
-        if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
         {
             tarPoint[i] = offsetPostion[i] + pointTemp[i];
         }
@@ -279,7 +279,7 @@ u8 MD::MD_InvSolCal(s32 *point, s32 *tarPoint, u8 axisNum, s32 value)
     else
     {//其他轴只需要进行直线偏移
         i = Z_AXIS;
-        tarPoint[i] = pointTemp[i] + GP->sMD_Parameter.goodOffset[i];
+        tarPoint[i] = pointTemp[i] + Global::sMD_Parameter.goodOffset[i];
     }
 
     return 0;
@@ -299,50 +299,50 @@ u8 MD::MD_SCARA_AxisOffset(s32 *point, u8 axisNum, s32 value)
     u16 i = 0;
     s32 tarPointTemp[AXIS_NUM] = {0};
     u8 ret = 0;
-    s32 z_MinPos = GP->Robot_SoftLimit[Z_AXIS].Left_Limit;
-    s32 z_MaxPos = GP->Robot_SoftLimit[Z_AXIS].Right_Limit;
+    s32 z_MinPos = Global::Robot_SoftLimit[Z_AXIS].Left_Limit;
+    s32 z_MaxPos = Global::Robot_SoftLimit[Z_AXIS].Right_Limit;
     s32 offsetPostion = 0;
     s32 axisAngle[AXIS_NUM] = {0};
     double screw = 0.0f;
     s32 point_O = 0;
 
-    if(GP->g_AxiseCarteType == 1 && (GP->sCartesian_Para.MDCoordType == 1 || GP->sCartesian_Para.MDCoordType == 2) && axisNum == O_AXIS)
+    if(Global::g_AxiseCarteType == 1 && (Global::sCartesian_Para.MDCoordType == 1 || Global::sCartesian_Para.MDCoordType == 2) && axisNum == O_AXIS)
     {//SCARA结构时，O轴需要处理
         //计算得到当前X、Y轴的角度
-        if(GP->sCartesian_Para.axisBackMinDir[X_AXIS] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[X_AXIS] == 0)
         {
-            axisAngle[X_AXIS] = point[X_AXIS] - GP->JXS_Parameter.OriginOffset[X_AXIS];
+            axisAngle[X_AXIS] = point[X_AXIS] - Global::JXS_Parameter.OriginOffset[X_AXIS];
         }
         else
         {
-            axisAngle[X_AXIS] = GP->JXS_Parameter.OriginOffset[X_AXIS] - point[X_AXIS];
+            axisAngle[X_AXIS] = Global::JXS_Parameter.OriginOffset[X_AXIS] - point[X_AXIS];
         }
 
-        if(GP->sCartesian_Para.axisBackMinDir[L_AXIS] == 0)
+        if(Global::sCartesian_Para.axisBackMinDir[L_AXIS] == 0)
         {
-            axisAngle[L_AXIS] = point[L_AXIS] - GP->JXS_Parameter.OriginOffset[L_AXIS];
+            axisAngle[L_AXIS] = point[L_AXIS] - Global::JXS_Parameter.OriginOffset[L_AXIS];
         }
         else
         {
-            axisAngle[L_AXIS] = GP->JXS_Parameter.OriginOffset[L_AXIS] - point[L_AXIS];
+            axisAngle[L_AXIS] = Global::JXS_Parameter.OriginOffset[L_AXIS] - point[L_AXIS];
         }
 
         //得到新的O轴坐标
-        point_O = value - axisAngle[X_AXIS] - axisAngle[L_AXIS] + GP->JXS_Parameter.OriginOffset[O_AXIS];
-        if(GP->Robot_SoftLimit[O_AXIS].Switch_Limit == TRUE && point_O < static_cast<int>(GP->Robot_SoftLimit[O_AXIS].Left_Limit))
+        point_O = value - axisAngle[X_AXIS] - axisAngle[L_AXIS] + Global::JXS_Parameter.OriginOffset[O_AXIS];
+        if(Global::Robot_SoftLimit[O_AXIS].Switch_Limit == TRUE && point_O < static_cast<int>(Global::Robot_SoftLimit[O_AXIS].Left_Limit))
         {
-            point_O = GP->Robot_SoftLimit[O_AXIS].Left_Limit;
+            point_O = Global::Robot_SoftLimit[O_AXIS].Left_Limit;
         }
-        else if(GP->Robot_SoftLimit[O_AXIS].Switch_Limit == TRUE && point_O > static_cast<int>(GP->Robot_SoftLimit[O_AXIS].Right_Limit))
+        else if(Global::Robot_SoftLimit[O_AXIS].Switch_Limit == TRUE && point_O > static_cast<int>(Global::Robot_SoftLimit[O_AXIS].Right_Limit))
         {
-            point_O = GP->Robot_SoftLimit[O_AXIS].Right_Limit;
+            point_O = Global::Robot_SoftLimit[O_AXIS].Right_Limit;
         }
 
-        if(GP->sCartesian_Para.MDCoordType == 2)
+        if(Global::sCartesian_Para.MDCoordType == 2)
         {//SCARA时，根据O轴的变化，得到新的Z轴坐标
-            screw = GP->sCartesian_Para.pitchLength / 100.0f;
+            screw = Global::sCartesian_Para.pitchLength / 100.0f;
             offsetPostion = (point_O - point[O_AXIS]) * screw / 360;
-            if(GP->sCartesian_Para.axisBackMinDir[i] == 0)
+            if(Global::sCartesian_Para.axisBackMinDir[i] == 0)
             {
                 point[Z_AXIS] = offsetPostion + point[Z_AXIS];
             }
@@ -355,34 +355,34 @@ u8 MD::MD_SCARA_AxisOffset(s32 *point, u8 axisNum, s32 value)
 
         point[O_AXIS] = point_O;
     }
-    else if(GP->g_AxiseCarteType == 1 && GP->sCartesian_Para.MDCoordType == 2 && axisNum == Z_AXIS)
+    else if(Global::g_AxiseCarteType == 1 && Global::sCartesian_Para.MDCoordType == 2 && axisNum == Z_AXIS)
     {//SCARA结构时，Z轴需要转换
-        point[Z_AXIS] = value + GP->JXS_Parameter.OriginOffset[Z_AXIS];
+        point[Z_AXIS] = value + Global::JXS_Parameter.OriginOffset[Z_AXIS];
         //计算Z轴新的软限位
         z_MinPos = AXisMovePosCal_Z(Z_AXIS, point[O_AXIS] / 100.0f, 0) * 100;
         z_MaxPos = AXisMovePosCal_Z(Z_AXIS, point[O_AXIS] / 100.0f, 1) * 100;
 
-        if(GP->Robot_SoftLimit[Z_AXIS].Switch_Limit == TRUE && point[Z_AXIS] < z_MinPos)
+        if(Global::Robot_SoftLimit[Z_AXIS].Switch_Limit == TRUE && point[Z_AXIS] < z_MinPos)
         {
             point[Z_AXIS] = z_MinPos;
         }
-        else if(GP->Robot_SoftLimit[Z_AXIS].Switch_Limit == TRUE && point[Z_AXIS] > z_MaxPos)
+        else if(Global::Robot_SoftLimit[Z_AXIS].Switch_Limit == TRUE && point[Z_AXIS] > z_MaxPos)
         {
             point[Z_AXIS] = z_MaxPos;
         }
     }
-    else if(GP->g_AxiseCarteType == 1 && (GP->sCartesian_Para.MDCoordType == 1 || GP->sCartesian_Para.MDCoordType == 2))
+    else if(Global::g_AxiseCarteType == 1 && (Global::sCartesian_Para.MDCoordType == 1 || Global::sCartesian_Para.MDCoordType == 2))
     {//当前显示为笛卡尔坐标系
         ret = MD_InvSolCal(point, tarPointTemp, axisNum, value);			//逆解得到轴坐标
         if(ret == 0)
         {
             for(i=0; i<AXIS_NUM; i++)
             {
-                if(GP->sCartesian_Para.axisType[i] == 1)
+                if(Global::sCartesian_Para.axisType[i] == 1)
                 {//旋转轴才需要赋值
                     point[i] = tarPointTemp[i];
                 }
-                else if(i == Z_AXIS && GP->sCartesian_Para.axisType[O_AXIS] == 1)
+                else if(i == Z_AXIS && Global::sCartesian_Para.axisType[O_AXIS] == 1)
                 {//如果O轴为旋转轴，Z轴就需要补偿
                     point[i] = tarPointTemp[i];
                 }
@@ -395,7 +395,7 @@ u8 MD::MD_SCARA_AxisOffset(s32 *point, u8 axisNum, s32 value)
     }
     else
     {//显示为轴坐标系时直接赋值
-        point[axisNum] = value + GP->JXS_Parameter.OriginOffset[axisNum];
+        point[axisNum] = value + Global::JXS_Parameter.OriginOffset[axisNum];
         if(point[axisNum] < 0)
         {
             point[axisNum] = 0;
@@ -609,15 +609,15 @@ float MD::AXisMovePosCal_Z(u8 Axsis, double tarPos_O, u8 posType)
 
     /*计算因O轴旋转引起的高度变化量*/
     dis1 = tarPos_O / 360.0f;											//将O轴可以旋转的总的角度转换成多少圈
-    dis1 = dis1 * GP->sCartesian_Para.pitchLength / 100.0f;				//计算得到Z轴的补偿量
-    if(GP->sCartesian_Para.axisBackMinDir[Axsis] == 1)
+    dis1 = dis1 * Global::sCartesian_Para.pitchLength / 100.0f;				//计算得到Z轴的补偿量
+    if(Global::sCartesian_Para.axisBackMinDir[Axsis] == 1)
     {//两个轴的结构上表现垂直方向上的方向要相反，确保爪子在运动过程中保持原来高度
         dis1 = -dis1;
     }
 
     if(posType == 1)
     {//返回最大限位坐标
-        interAxisDis = GP->Robot_SoftLimit[Axsis].Right_Limit / 100.0f + dis2 + dis1;
+        interAxisDis = Global::Robot_SoftLimit[Axsis].Right_Limit / 100.0f + dis2 + dis1;
     }
     else
     {//返回最小限位坐标

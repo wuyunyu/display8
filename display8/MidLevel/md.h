@@ -18,7 +18,7 @@ public:
     u8 MD_SCARA_AxisOffset(s32 *point, u8 axisNum, s32 value);
 
 private:
-    GlobalPara *GP;
+//    Global GL;
     u8 ScaraFindHandcoor(double theta2);
     u8 ScaraFindFlagJ1(double theta1);
     u8 ScaraFindFlagJ2(double theta2);

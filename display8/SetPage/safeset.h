@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QList>
+#include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QIntValidator>
@@ -19,13 +20,12 @@ class SafeSet : public QWidget
 {
     Q_OBJECT
 
-    friend class SetPage;
-
 public:
     explicit SafeSet(QWidget *parent = nullptr);
     ~SafeSet();
 
 public:
+    QList<QLabel*> Label_CurPos_List;
     QList<QLineEdit*> Edit_LimPos_Minus;
     QList<QLineEdit*> Edit_LimPos_Add;
     QList<QPushButton*> Btn_AXIS_Enable;
@@ -34,7 +34,8 @@ public:
     void init();
 
 public:
-    void Refresh_SoftLimit_Temp(u8 flag);
+    void Refresh_SoftLimit_Temp();
+    void Reflash_SoftLimit();
 
 private slots:
     void on_Edit_XPos1_editingFinished();
@@ -45,10 +46,9 @@ private slots:
 
     void on_Edit_ZPos2_editingFinished();
 
-private:
+public:
     Ui::SafeSet *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

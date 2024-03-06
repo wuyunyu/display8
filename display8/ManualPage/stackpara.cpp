@@ -14,7 +14,7 @@ StackPara::StackPara(QWidget *parent) :
 
     //返回码垛管理界面
     connect(ui->Btn_back, &QPushButton::clicked, this, [=](){   
-        pWidget->backStackingPage();
+        pWidget->stackingPage();
     });
 
     connect(ui->Btn_offset, &QPushButton::clicked, this, [=](){
@@ -94,4 +94,21 @@ void StackPara::modStackCoord()
     connect(ui->Btn_pointNum8_2, &QPushButton::clicked, this, [=](){
         pWidget->stackSetPage();
     });
+}
+
+//码垛参数设置页面气缸端口选择显示
+void StackPara::dispIOPortText(u8 IOPort)
+{
+    ui->Btn_port->setText(OutputIO_Detect_IO[IOPort]);
+    Global::f_Send_MDPara(Global::sMD_Parameter.code);
+    if(Global::sMD_Parameter.stackType != 0)
+    {
+        ui->stackedWidget->setCurrentIndex(1);
+    }
+    else
+    {
+        ui->stackedWidget->setCurrentIndex(1);
+    }
+    pWidget->stackParaPage();
+    Global::m_MD_GasPort_Flag = FALSE;
 }

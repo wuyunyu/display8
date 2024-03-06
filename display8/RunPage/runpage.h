@@ -27,10 +27,9 @@ private slots:
     void on_Btn_rstOK_clicked();
     void on_Btn_rstCancel_clicked();
 
-private:
+public:
     Ui::RunPage *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

@@ -21,10 +21,9 @@ public:
 public:
     void Refresh_MD_Circulation();
 
-private:
+public:
     Ui::StackSet *ui;
-    GlobalPara *GP;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
 };
 

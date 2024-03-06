@@ -25,13 +25,9 @@ class UserSet : public QWidget
 {
     Q_OBJECT
 
-    friend class SetPage;
-
 public:
-    QString Key;
     bool bAdmin;
-    bool bBee;
-    uint32_t backlightTime;
+    u32 backlightTime;
 
 public:
     explicit UserSet(QWidget *parent = nullptr);
@@ -41,11 +37,9 @@ public:
     void init();
     void editClr();
     void clockSetShow();
-    bool passwordModErrorTip();
     void showEvent(QShowEvent *event) override;
     void hideEvent(QHideEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
-    void RestoreSetting();
 
 private:
     void fixTime(QLineEdit* lineEdit, int max, int min);
@@ -57,22 +51,18 @@ private:
 
 private slots:
     void freshTimeUi();
-    void on_Btn_clockSetOk_clicked();
-    void on_Btn_buzzer_clicked();   
 
 public:
-    void Pass_Word_Refresh(u8 flag);
+    void Pass_Word_Refresh();
 
 
-private:
+public:
     Ui::UserSet *ui;
-
+//    Global GL;
     Widget *pWidget;    //创建父类窗口指针
     IBeeper *mBeeper;
-    IBacklighter* mLighter;
+    IBacklighter *mLighter;
     QTimer* mTimer;
-
-    GlobalPara *GP;
 };
 
 #endif // USERSET_H
